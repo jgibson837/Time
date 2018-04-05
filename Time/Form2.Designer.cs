@@ -39,9 +39,6 @@
             System.Windows.Forms.Label randomLabel;
             System.Windows.Forms.Label hoursWorkedLabel;
             System.Windows.Forms.Label categoriesLabel;
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,7 +62,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,6 +106,10 @@
             this.newWorkingHoursTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.NewWorkingHoursTableTableAdapter();
             this.tableAdapterManager2 = new Time.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             startTimeLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
             startLunchLabel = new System.Windows.Forms.Label();
@@ -124,51 +124,54 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workingHoursTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableDataGridView)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // startTimeLabel
             // 
             startTimeLabel.AutoSize = true;
-            startTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            startTimeLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             startTimeLabel.Location = new System.Drawing.Point(15, 145);
             startTimeLabel.Name = "startTimeLabel";
-            startTimeLabel.Size = new System.Drawing.Size(76, 18);
+            startTimeLabel.Size = new System.Drawing.Size(75, 19);
             startTimeLabel.TabIndex = 11;
             startTimeLabel.Text = "Start Time";
             // 
             // endTimeLabel
             // 
             endTimeLabel.AutoSize = true;
-            endTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            endTimeLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             endTimeLabel.Location = new System.Drawing.Point(15, 268);
             endTimeLabel.Name = "endTimeLabel";
-            endTimeLabel.Size = new System.Drawing.Size(71, 18);
+            endTimeLabel.Size = new System.Drawing.Size(69, 19);
             endTimeLabel.TabIndex = 13;
             endTimeLabel.Text = "End Time";
             // 
             // startLunchLabel
             // 
             startLunchLabel.AutoSize = true;
-            startLunchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            startLunchLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             startLunchLabel.Location = new System.Drawing.Point(15, 190);
             startLunchLabel.Name = "startLunchLabel";
-            startLunchLabel.Size = new System.Drawing.Size(83, 18);
+            startLunchLabel.Size = new System.Drawing.Size(81, 19);
             startLunchLabel.TabIndex = 15;
             startLunchLabel.Text = "Start Lunch";
             // 
             // endLunchLabel
             // 
             endLunchLabel.AutoSize = true;
-            endLunchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            endLunchLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             endLunchLabel.Location = new System.Drawing.Point(15, 228);
             endLunchLabel.Name = "endLunchLabel";
-            endLunchLabel.Size = new System.Drawing.Size(78, 18);
+            endLunchLabel.Size = new System.Drawing.Size(75, 19);
             endLunchLabel.TabIndex = 17;
             endLunchLabel.Text = "End Lunch";
             // 
@@ -193,10 +196,10 @@
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dateLabel.Location = new System.Drawing.Point(15, 103);
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(39, 18);
+            dateLabel.Size = new System.Drawing.Size(40, 19);
             dateLabel.TabIndex = 23;
             dateLabel.Text = "Date";
             // 
@@ -227,48 +230,6 @@
             categoriesLabel.TabIndex = 55;
             categoriesLabel.Text = "Categories:";
             // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(399, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Calender";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(503, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Payslip";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(295, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 28);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Home ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -276,26 +237,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(153, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Timestamp";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(295, 74);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -306,9 +269,9 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(594, 74);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
@@ -319,9 +282,9 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(495, 74);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
@@ -332,9 +295,9 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(396, 74);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(78, 23);
@@ -460,17 +423,6 @@
             this.label11.TabIndex = 40;
             this.label11.Text = "W - L";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Time.Properties.Resources.JessLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 337);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -494,10 +446,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(752, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 16);
+            this.label4.Size = new System.Drawing.Size(105, 19);
             this.label4.TabIndex = 44;
             this.label4.Text = "Total Overtime";
             // 
@@ -620,12 +572,12 @@
             // button8
             // 
             this.button8.AutoSize = true;
-            this.button8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(751, 12);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(98, 28);
+            this.button8.Size = new System.Drawing.Size(98, 29);
             this.button8.TabIndex = 46;
             this.button8.Text = "Logout";
             this.button8.UseVisualStyleBackColor = false;
@@ -634,9 +586,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(607, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 47;
             this.label5.Text = "Job Role";
             // 
@@ -852,16 +805,65 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(719, 55);
+            this.textBox7.Location = new System.Drawing.Point(624, 151);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 71;
+            this.textBox7.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 337);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(281, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg;
+            this.pictureBox2.Location = new System.Drawing.Point(513, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 72;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg;
+            this.pictureBox3.Location = new System.Drawing.Point(417, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 73;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg;
+            this.pictureBox4.Location = new System.Drawing.Point(302, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 74;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 459);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.newWorkingHoursTableDataGridView);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button11);
@@ -877,7 +879,6 @@
             this.Controls.Add(this.hoursWorkedTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.newWorkingHoursTableDataGridView);
             this.Controls.Add(randomLabel);
             this.Controls.Add(this.randomTextBox);
             this.Controls.Add(this.label4);
@@ -907,9 +908,8 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.MaximumSize = new System.Drawing.Size(900, 498);
+            this.MinimumSize = new System.Drawing.Size(900, 498);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -918,7 +918,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workingHoursTableBindingSource)).EndInit();
@@ -926,16 +925,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableDataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -1004,5 +1003,8 @@
         private DataBaseDataSetTableAdapters.NewWorkingHoursTableTableAdapter newWorkingHoursTableTableAdapter1;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

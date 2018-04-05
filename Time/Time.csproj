@@ -236,6 +236,18 @@
   <ItemGroup>
     <None Include="Resources\cat.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nisoftlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payslipimg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

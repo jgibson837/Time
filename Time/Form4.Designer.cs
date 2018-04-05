@@ -42,6 +42,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginDTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new Time.DataBaseDataSet();
             this.loginDTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginDDataSet = new Time.LoginDDataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -74,6 +76,12 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.loginDTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -81,13 +89,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.newWorkingHoursTableTableAdapter = new Time.LoginDDataSet3TableAdapters.NewWorkingHoursTableTableAdapter();
             this.tableAdapterManager1 = new Time.LoginDDataSet3TableAdapters.TableAdapterManager();
             this.newWorkingHoursTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newWorkingHoursTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -104,7 +120,11 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.payTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SearchName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.payTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginDDataSet4 = new Time.LoginDDataSet4();
             this.label24 = new System.Windows.Forms.Label();
@@ -124,33 +144,13 @@
             this.payTableTableAdapter = new Time.LoginDDataSet4TableAdapters.PayTableTableAdapter();
             this.tableAdapterManager2 = new Time.LoginDDataSet4TableAdapters.TableAdapterManager();
             this.searchNameTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.payTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBaseDataSet = new Time.DataBaseDataSet();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.newWorkingHoursTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.payTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.PayTableTableAdapter();
             this.tableAdapterManager3 = new Time.DataBaseDataSetTableAdapters.TableAdapterManager();
             this.loginDTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.LoginDTableTableAdapter();
             this.newWorkingHoursTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.NewWorkingHoursTableTableAdapter();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             overtimeLabel = new System.Windows.Forms.Label();
             monthlyPayLabel = new System.Windows.Forms.Label();
             uniqueNumberLabel = new System.Windows.Forms.Label();
@@ -159,6 +159,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet)).BeginInit();
             this.panel4.SuspendLayout();
@@ -174,17 +176,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.loginDTableDataGridView)).BeginInit();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payTableDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.payTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.payTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet4)).BeginInit();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.payTableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // overtimeLabel
@@ -306,6 +309,16 @@
             this.textBox1.TabIndex = 39;
             this.textBox1.Text = "Done";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // loginDTableBindingSource1
+            // 
+            this.loginDTableBindingSource1.DataMember = "LoginDTable";
+            this.loginDTableBindingSource1.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // loginDTableBindingSource
             // 
@@ -600,6 +613,42 @@
             this.loginDTableDataGridView.Size = new System.Drawing.Size(100, 110);
             this.loginDTableDataGridView.TabIndex = 60;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Full_name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Full_name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Department";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Department";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Employer";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Employer";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Job Role";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Job Role";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // textBox13
             // 
             this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Job Role", true));
@@ -660,57 +709,15 @@
             this.label10.TabIndex = 64;
             this.label10.Text = "TotalPayAnswer";
             // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(170, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 28);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "Home ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(378, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 28);
-            this.button2.TabIndex = 66;
-            this.button2.Text = "Payslip";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(274, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 28);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "Calender";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button8
             // 
             this.button8.AutoSize = true;
-            this.button8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(570, 12);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(98, 28);
+            this.button8.Size = new System.Drawing.Size(98, 33);
             this.button8.TabIndex = 68;
             this.button8.Text = "Logout";
             this.button8.UseVisualStyleBackColor = false;
@@ -747,12 +754,78 @@
             this.newWorkingHoursTableDataGridView.Size = new System.Drawing.Size(100, 108);
             this.newWorkingHoursTableDataGridView.TabIndex = 68;
             // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "StartTime";
+            this.dataGridViewTextBoxColumn7.HeaderText = "StartTime";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "EndTime";
+            this.dataGridViewTextBoxColumn8.HeaderText = "EndTime";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "StartLunch";
+            this.dataGridViewTextBoxColumn9.HeaderText = "StartLunch";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "EndLunch";
+            this.dataGridViewTextBoxColumn10.HeaderText = "EndLunch";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Job";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Job";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Overtime";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Overtime";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "UniqueID";
+            this.dataGridViewTextBoxColumn14.HeaderText = "UniqueID";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "HoursWorked";
+            this.dataGridViewTextBoxColumn15.HeaderText = "HoursWorked";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Categories";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Categories";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // newWorkingHoursTableBindingSource1
+            // 
+            this.newWorkingHoursTableBindingSource1.DataMember = "NewWorkingHoursTable";
+            this.newWorkingHoursTableBindingSource1.DataSource = this.dataBaseDataSet;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(12, 21);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.Size = new System.Drawing.Size(64, 14);
             this.label11.TabIndex = 69;
             this.label11.Text = "UserName";
             // 
@@ -895,6 +968,28 @@
             this.payTableDataGridView.Size = new System.Drawing.Size(250, 158);
             this.payTableDataGridView.TabIndex = 79;
             // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "TheDate";
+            this.dataGridViewTextBoxColumn19.HeaderText = "The Date";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "MonthlyPay";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Monthly Pay";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "UniqueNumber";
+            this.dataGridViewTextBoxColumn18.HeaderText = "UniqueNumber";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
             // SearchName
             // 
             this.SearchName.DataPropertyName = "SearchName";
@@ -902,6 +997,11 @@
             this.SearchName.Name = "SearchName";
             this.SearchName.ReadOnly = true;
             this.SearchName.Visible = false;
+            // 
+            // payTableBindingSource1
+            // 
+            this.payTableBindingSource1.DataMember = "PayTable";
+            this.payTableBindingSource1.DataSource = this.dataBaseDataSet;
             // 
             // payTableBindingSource
             // 
@@ -976,9 +1076,10 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(75, 21);
+            this.label28.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(82, 21);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(30, 13);
+            this.label28.Size = new System.Drawing.Size(33, 14);
             this.label28.TabIndex = 90;
             this.label28.Text = "Date";
             // 
@@ -1067,144 +1168,6 @@
             this.searchNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.searchNameTextBox.TabIndex = 97;
             // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "TheDate";
-            this.dataGridViewTextBoxColumn19.HeaderText = "The Date";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "MonthlyPay";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Monthly Pay";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "UniqueNumber";
-            this.dataGridViewTextBoxColumn18.HeaderText = "UniqueNumber";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Visible = false;
-            // 
-            // payTableBindingSource1
-            // 
-            this.payTableBindingSource1.DataMember = "PayTable";
-            this.payTableBindingSource1.DataSource = this.dataBaseDataSet;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "StartTime";
-            this.dataGridViewTextBoxColumn7.HeaderText = "StartTime";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "EndTime";
-            this.dataGridViewTextBoxColumn8.HeaderText = "EndTime";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "StartLunch";
-            this.dataGridViewTextBoxColumn9.HeaderText = "StartLunch";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "EndLunch";
-            this.dataGridViewTextBoxColumn10.HeaderText = "EndLunch";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Job";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Job";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Overtime";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Overtime";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "UniqueID";
-            this.dataGridViewTextBoxColumn14.HeaderText = "UniqueID";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "HoursWorked";
-            this.dataGridViewTextBoxColumn15.HeaderText = "HoursWorked";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Categories";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Categories";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // newWorkingHoursTableBindingSource1
-            // 
-            this.newWorkingHoursTableBindingSource1.DataMember = "NewWorkingHoursTable";
-            this.newWorkingHoursTableBindingSource1.DataSource = this.dataBaseDataSet;
-            // 
-            // loginDTableBindingSource1
-            // 
-            this.loginDTableBindingSource1.DataMember = "LoginDTable";
-            this.loginDTableBindingSource1.DataSource = this.dataBaseDataSet;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Full_name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Full_name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Department";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Department";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Employer";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Employer";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Job Role";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Job Role";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // payTableTableAdapter1
             // 
             this.payTableTableAdapter1.ClearBeforeFill = true;
@@ -1226,12 +1189,47 @@
             // 
             this.newWorkingHoursTableTableAdapter1.ClearBeforeFill = true;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg;
+            this.pictureBox4.Location = new System.Drawing.Point(194, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 100;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg;
+            this.pictureBox3.Location = new System.Drawing.Point(305, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 99;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg;
+            this.pictureBox2.Location = new System.Drawing.Point(421, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 98;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(699, 488);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(searchNameLabel);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.searchNameTextBox);
@@ -1263,9 +1261,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.newWorkingHoursTableDataGridView);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.textBox14);
@@ -1308,6 +1303,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -1332,20 +1329,21 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payTableDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.payTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.payTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet4)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.payTableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1409,9 +1407,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button8;
         private LoginDDataSet3TableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.DataGridView newWorkingHoursTableDataGridView;
@@ -1470,5 +1465,8 @@
         private System.Windows.Forms.BindingSource loginDTableBindingSource1;
         private DataBaseDataSetTableAdapters.NewWorkingHoursTableTableAdapter newWorkingHoursTableTableAdapter1;
         private System.Windows.Forms.BindingSource newWorkingHoursTableBindingSource1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

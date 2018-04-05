@@ -238,5 +238,43 @@ namespace Time
            
 
         }
+
+        #region PictureBoxHomeButton
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+           
+            
+                Form2 Form2 = new Form2();
+                Form2.Show();
+                this.Hide();
+            
+        }
+        #endregion
+
+        #region PictureBoxCalendarButton
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+            
+                Form3 Form3 = new Form3();
+                Form3.Show();
+                this.Hide();
+            
+       
+        }
+        #endregion
+
+        #region PictureBoxPaySlipButton
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           
+            
+                Form4 Form4 = new Form4();
+                Form4.Show();
+                this.Hide();
+            
+          
+        }
+        #endregion
     }
 }

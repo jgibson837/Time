@@ -168,7 +168,7 @@ namespace Time
         }
         #endregion
 
-        #region CalanderButton
+        #region CalanderButton - obs
         private void button1_Click(object sender, EventArgs e)
         {
             Total = 0;
@@ -190,7 +190,7 @@ namespace Time
         }
         #endregion
 
-        #region PaySlipButton
+        #region PaySlipButton - obs
         private void button2_Click(object sender, EventArgs e)
         {
             Total = 0;
@@ -212,7 +212,7 @@ namespace Time
         }
         #endregion
 
-        #region HomeButton
+        #region HomeButton - obs
         private void button3_Click(object sender, EventArgs e)
         {
             Form2 Form2 = new Form2();
@@ -293,5 +293,68 @@ namespace Time
            
 
         }
+
+        #region CalanderPictureBoxButton 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+                Total = 0;
+
+                for (int i = 0; i < newWorkingHoursTableDataGridView.Rows.Count; ++i)
+                {
+                    Total += Convert.ToDecimal(newWorkingHoursTableDataGridView.Rows[i].Cells[7].Value);
+                }
+
+                TotalOverTime = 0;
+
+                for (int i = 0; i < newWorkingHoursTableDataGridView.Rows.Count; ++i)
+                {
+                    TotalOverTime += Convert.ToDecimal(newWorkingHoursTableDataGridView.Rows[i].Cells[8].Value);
+                }
+                Form3 Form3 = new Form3();
+                Form3.Show();
+                this.Hide();
+            
+        }
+        #endregion
+
+        #region PictureBoxHomeButton 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+           
+
+                Form2 Form2 = new Form2();
+                Form2.Show();
+                this.Hide();
+            
+        
+        }
+        #endregion
+
+        #region PictureBoxPaySlipButton 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           
+           
+                Total = 0;
+
+                for (int i = 0; i < newWorkingHoursTableDataGridView.Rows.Count; ++i)
+                {
+                    Total += Convert.ToDecimal(newWorkingHoursTableDataGridView.Rows[i].Cells[7].Value);
+                }
+
+                TotalOverTime = 0;
+
+                for (int i = 0; i < newWorkingHoursTableDataGridView.Rows.Count; ++i)
+                {
+                    TotalOverTime += Convert.ToDecimal(newWorkingHoursTableDataGridView.Rows[i].Cells[8].Value);
+                }
+                Form4 Form4 = new Form4();
+                Form4.Show();
+                this.Hide();
+            
+            
+        }
+        #endregion
     }
 }

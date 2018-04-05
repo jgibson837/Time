@@ -106,7 +106,7 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(184, 320);
+            passwordLabel.Location = new System.Drawing.Point(593, 203);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(30, 13);
             passwordLabel.TabIndex = 9;
@@ -115,7 +115,7 @@
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(185, 353);
+            usernameLabel.Location = new System.Drawing.Point(613, 258);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new System.Drawing.Size(29, 13);
             usernameLabel.TabIndex = 11;
@@ -124,37 +124,37 @@
             // usernameLabel1
             // 
             usernameLabel1.AutoSize = true;
-            usernameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usernameLabel1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             usernameLabel1.Location = new System.Drawing.Point(1, 111);
             usernameLabel1.Name = "usernameLabel1";
-            usernameLabel1.Size = new System.Drawing.Size(111, 18);
+            usernameLabel1.Size = new System.Drawing.Size(103, 18);
             usernameLabel1.TabIndex = 12;
             usernameLabel1.Text = "New Username";
             // 
             // passwordLabel1
             // 
             passwordLabel1.AutoSize = true;
-            passwordLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            passwordLabel1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             passwordLabel1.Location = new System.Drawing.Point(3, 141);
             passwordLabel1.Name = "passwordLabel1";
-            passwordLabel1.Size = new System.Drawing.Size(109, 18);
+            passwordLabel1.Size = new System.Drawing.Size(99, 18);
             passwordLabel1.TabIndex = 14;
             passwordLabel1.Text = "New Password";
             // 
             // full_nameLabel
             // 
             full_nameLabel.AutoSize = true;
-            full_nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            full_nameLabel.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             full_nameLabel.Location = new System.Drawing.Point(3, 8);
             full_nameLabel.Name = "full_nameLabel";
-            full_nameLabel.Size = new System.Drawing.Size(79, 18);
+            full_nameLabel.Size = new System.Drawing.Size(74, 18);
             full_nameLabel.TabIndex = 23;
             full_nameLabel.Text = "Full Name ";
             // 
             // departmentLabel
             // 
             departmentLabel.AutoSize = true;
-            departmentLabel.Location = new System.Drawing.Point(199, 303);
+            departmentLabel.Location = new System.Drawing.Point(593, 253);
             departmentLabel.Name = "departmentLabel";
             departmentLabel.Size = new System.Drawing.Size(65, 13);
             departmentLabel.TabIndex = 24;
@@ -163,10 +163,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.Location = new System.Drawing.Point(3, 38);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(85, 18);
+            label4.Size = new System.Drawing.Size(83, 18);
             label4.TabIndex = 27;
             label4.Text = "Department";
             // 
@@ -174,7 +174,7 @@
             // 
             employerLabel.AutoSize = true;
             employerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            employerLabel.Location = new System.Drawing.Point(315, 317);
+            employerLabel.Location = new System.Drawing.Point(634, 272);
             employerLabel.Name = "employerLabel";
             employerLabel.Size = new System.Drawing.Size(71, 18);
             employerLabel.TabIndex = 25;
@@ -183,7 +183,7 @@
             // job_RoleLabel
             // 
             job_RoleLabel.AutoSize = true;
-            job_RoleLabel.Location = new System.Drawing.Point(214, 280);
+            job_RoleLabel.Location = new System.Drawing.Point(626, 249);
             job_RoleLabel.Name = "job_RoleLabel";
             job_RoleLabel.Size = new System.Drawing.Size(52, 13);
             job_RoleLabel.TabIndex = 25;
@@ -192,17 +192,17 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label5.Location = new System.Drawing.Point(3, 69);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(68, 18);
+            label5.Size = new System.Drawing.Size(60, 18);
             label5.TabIndex = 30;
             label5.Text = "Job Role";
             // 
             // nI_NumberLabel
             // 
             nI_NumberLabel.AutoSize = true;
-            nI_NumberLabel.Location = new System.Drawing.Point(282, 280);
+            nI_NumberLabel.Location = new System.Drawing.Point(611, 223);
             nI_NumberLabel.Name = "nI_NumberLabel";
             nI_NumberLabel.Size = new System.Drawing.Size(61, 13);
             nI_NumberLabel.TabIndex = 29;
@@ -226,10 +226,10 @@
             // button2
             // 
             this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(425, 36);
+            this.button2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(449, 329);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 28);
             this.button2.TabIndex = 3;
@@ -240,27 +240,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(145, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 18);
+            this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(4, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Password", true));
-            this.passwordTextBox.Location = new System.Drawing.Point(245, 317);
+            this.passwordTextBox.Location = new System.Drawing.Point(654, 200);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(33, 20);
             this.passwordTextBox.TabIndex = 10;
@@ -278,7 +278,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Username", true));
-            this.usernameTextBox.Location = new System.Drawing.Point(207, 336);
+            this.usernameTextBox.Location = new System.Drawing.Point(616, 219);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(31, 20);
             this.usernameTextBox.TabIndex = 12;
@@ -306,7 +306,7 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(158, 81);
+            this.panel2.Location = new System.Drawing.Point(170, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 152);
             this.panel2.TabIndex = 17;
@@ -314,9 +314,9 @@
             // button4
             // 
             this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(65, 107);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 28);
@@ -338,7 +338,7 @@
             this.panel3.Controls.Add(this.passwordTextBox1);
             this.panel3.Controls.Add(this.usernameTextBox1);
             this.panel3.Controls.Add(usernameLabel1);
-            this.panel3.Location = new System.Drawing.Point(104, 36);
+            this.panel3.Location = new System.Drawing.Point(24, 108);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(315, 203);
             this.panel3.TabIndex = 19;
@@ -373,9 +373,9 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(117, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 28);
@@ -387,17 +387,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(188, 9);
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(201, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 18);
+            this.label3.Size = new System.Drawing.Size(195, 25);
             this.label3.TabIndex = 21;
             this.label3.Text = "Login or Create Account";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(256, 272);
+            this.textBox3.Location = new System.Drawing.Point(668, 241);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(33, 20);
             this.textBox3.TabIndex = 6;
@@ -414,7 +415,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.loginDTableDataGridView.DataSource = this.loginDTableBindingSource1;
-            this.loginDTableDataGridView.Location = new System.Drawing.Point(223, 269);
+            this.loginDTableDataGridView.Location = new System.Drawing.Point(591, 146);
             this.loginDTableDataGridView.Name = "loginDTableDataGridView";
             this.loginDTableDataGridView.Size = new System.Drawing.Size(163, 85);
             this.loginDTableDataGridView.TabIndex = 21;
@@ -458,7 +459,7 @@
             // departmentTextBox
             // 
             this.departmentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Department", true));
-            this.departmentTextBox.Location = new System.Drawing.Point(270, 300);
+            this.departmentTextBox.Location = new System.Drawing.Point(589, 255);
             this.departmentTextBox.Name = "departmentTextBox";
             this.departmentTextBox.Size = new System.Drawing.Size(100, 20);
             this.departmentTextBox.TabIndex = 25;
@@ -466,7 +467,7 @@
             // employerTextBox
             // 
             this.employerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Employer", true));
-            this.employerTextBox.Location = new System.Drawing.Point(273, 337);
+            this.employerTextBox.Location = new System.Drawing.Point(641, 214);
             this.employerTextBox.Name = "employerTextBox";
             this.employerTextBox.Size = new System.Drawing.Size(100, 20);
             this.employerTextBox.TabIndex = 26;
@@ -474,7 +475,7 @@
             // job_RoleTextBox
             // 
             this.job_RoleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Job Role", true));
-            this.job_RoleTextBox.Location = new System.Drawing.Point(272, 277);
+            this.job_RoleTextBox.Location = new System.Drawing.Point(591, 232);
             this.job_RoleTextBox.Name = "job_RoleTextBox";
             this.job_RoleTextBox.Size = new System.Drawing.Size(100, 20);
             this.job_RoleTextBox.TabIndex = 26;
@@ -487,7 +488,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(184, 275);
+            this.label6.Location = new System.Drawing.Point(596, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(19, 13);
             this.label6.TabIndex = 27;
@@ -496,7 +497,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(182, 301);
+            this.label7.Location = new System.Drawing.Point(637, 245);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 13);
             this.label7.TabIndex = 28;
@@ -505,7 +506,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(177, 348);
+            this.label8.Location = new System.Drawing.Point(586, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(19, 13);
             this.label8.TabIndex = 29;
@@ -514,7 +515,7 @@
             // nI_NumberTextBox
             // 
             this.nI_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "NI_Number", true));
-            this.nI_NumberTextBox.Location = new System.Drawing.Point(261, 326);
+            this.nI_NumberTextBox.Location = new System.Drawing.Point(629, 203);
             this.nI_NumberTextBox.Name = "nI_NumberTextBox";
             this.nI_NumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.nI_NumberTextBox.TabIndex = 30;
@@ -522,10 +523,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Time.Properties.Resources.JessLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 245);
+            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -567,13 +568,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(581, 375);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.loginDTableDataGridView);
             this.Controls.Add(nI_NumberLabel);
             this.Controls.Add(this.nI_NumberTextBox);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(job_RoleLabel);
@@ -586,9 +588,7 @@
             this.Controls.Add(passwordLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(usernameLabel);
             this.Controls.Add(this.button2);
             this.MaximumSize = new System.Drawing.Size(597, 414);
