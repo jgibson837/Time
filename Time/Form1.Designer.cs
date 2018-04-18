@@ -46,8 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.loginDTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBaseDataSet = new Time.DataBaseDataSet();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox1 = new System.Windows.Forms.TextBox();
             this.passwordTextBox1 = new System.Windows.Forms.TextBox();
@@ -61,12 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.loginDTableDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentTextBox = new System.Windows.Forms.TextBox();
             this.employerTextBox = new System.Windows.Forms.TextBox();
             this.job_RoleTextBox = new System.Windows.Forms.TextBox();
@@ -80,6 +72,15 @@
             this.loginDDataSet = new Time.LoginDDataSet();
             this.loginDTableTableAdapter = new Time.LoginDDataSetTableAdapters.LoginDTableTableAdapter();
             this.tableAdapterManager = new Time.LoginDDataSetTableAdapters.TableAdapterManager();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.loginDTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new Time.DataBaseDataSet();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.LoginDTableTableAdapter();
             this.tableAdapterManager1 = new Time.DataBaseDataSetTableAdapters.TableAdapterManager();
             passwordLabel = new System.Windows.Forms.Label();
@@ -93,20 +94,20 @@
             job_RoleLabel = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             nI_NumberLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginDTableDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(593, 203);
+            passwordLabel.Location = new System.Drawing.Point(593, 185);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(30, 13);
             passwordLabel.TabIndex = 9;
@@ -174,7 +175,7 @@
             // 
             employerLabel.AutoSize = true;
             employerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            employerLabel.Location = new System.Drawing.Point(634, 272);
+            employerLabel.Location = new System.Drawing.Point(637, 308);
             employerLabel.Name = "employerLabel";
             employerLabel.Size = new System.Drawing.Size(71, 18);
             employerLabel.TabIndex = 25;
@@ -264,16 +265,6 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(33, 20);
             this.passwordTextBox.TabIndex = 10;
-            // 
-            // loginDTableBindingSource1
-            // 
-            this.loginDTableBindingSource1.DataMember = "LoginDTable";
-            this.loginDTableBindingSource1.DataSource = this.dataBaseDataSet;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usernameTextBox
             // 
@@ -398,7 +389,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(668, 241);
+            this.textBox3.Location = new System.Drawing.Point(729, 224);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(33, 20);
             this.textBox3.TabIndex = 6;
@@ -415,51 +406,15 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.loginDTableDataGridView.DataSource = this.loginDTableBindingSource1;
-            this.loginDTableDataGridView.Location = new System.Drawing.Point(591, 146);
+            this.loginDTableDataGridView.Location = new System.Drawing.Point(599, 79);
             this.loginDTableDataGridView.Name = "loginDTableDataGridView";
             this.loginDTableDataGridView.Size = new System.Drawing.Size(163, 85);
             this.loginDTableDataGridView.TabIndex = 21;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Full_name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Full_name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Department";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Department";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Employer";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Employer";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Job Role";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Job Role";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // departmentTextBox
             // 
             this.departmentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Department", true));
-            this.departmentTextBox.Location = new System.Drawing.Point(589, 255);
+            this.departmentTextBox.Location = new System.Drawing.Point(637, 280);
             this.departmentTextBox.Name = "departmentTextBox";
             this.departmentTextBox.Size = new System.Drawing.Size(100, 20);
             this.departmentTextBox.TabIndex = 25;
@@ -467,7 +422,7 @@
             // employerTextBox
             // 
             this.employerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Employer", true));
-            this.employerTextBox.Location = new System.Drawing.Point(641, 214);
+            this.employerTextBox.Location = new System.Drawing.Point(637, 329);
             this.employerTextBox.Name = "employerTextBox";
             this.employerTextBox.Size = new System.Drawing.Size(100, 20);
             this.employerTextBox.TabIndex = 26;
@@ -475,7 +430,7 @@
             // job_RoleTextBox
             // 
             this.job_RoleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Job Role", true));
-            this.job_RoleTextBox.Location = new System.Drawing.Point(591, 232);
+            this.job_RoleTextBox.Location = new System.Drawing.Point(654, 51);
             this.job_RoleTextBox.Name = "job_RoleTextBox";
             this.job_RoleTextBox.Size = new System.Drawing.Size(100, 20);
             this.job_RoleTextBox.TabIndex = 26;
@@ -515,7 +470,7 @@
             // nI_NumberTextBox
             // 
             this.nI_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "NI_Number", true));
-            this.nI_NumberTextBox.Location = new System.Drawing.Point(629, 203);
+            this.nI_NumberTextBox.Location = new System.Drawing.Point(654, 174);
             this.nI_NumberTextBox.Name = "nI_NumberTextBox";
             this.nI_NumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.nI_NumberTextBox.TabIndex = 30;
@@ -523,7 +478,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo;
+            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo1;
             this.pictureBox1.Location = new System.Drawing.Point(3, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 88);
@@ -551,6 +506,60 @@
             this.tableAdapterManager.LoginDTableTableAdapter = this.loginDTableTableAdapter;
             this.tableAdapterManager.UpdateOrder = Time.LoginDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Full_name", true));
+            this.textBox4.Location = new System.Drawing.Point(704, 251);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(33, 20);
+            this.textBox4.TabIndex = 32;
+            // 
+            // loginDTableBindingSource1
+            // 
+            this.loginDTableBindingSource1.DataMember = "LoginDTable";
+            this.loginDTableBindingSource1.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Full_name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Full_name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Department";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Department";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Employer";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Employer";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Job Role";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Job Role";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // loginDTableTableAdapter1
             // 
             this.loginDTableTableAdapter1.ClearBeforeFill = true;
@@ -568,7 +577,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(581, 375);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.loginDTableDataGridView);
@@ -591,14 +602,12 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(usernameLabel);
             this.Controls.Add(this.button2);
-            this.MaximumSize = new System.Drawing.Size(597, 414);
+            this.MaximumSize = new System.Drawing.Size(800, 414);
             this.MinimumSize = new System.Drawing.Size(597, 414);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -607,6 +616,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,6 +666,7 @@
         private System.Windows.Forms.BindingSource loginDTableBindingSource1;
         private DataBaseDataSetTableAdapters.LoginDTableTableAdapter loginDTableTableAdapter1;
         private DataBaseDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

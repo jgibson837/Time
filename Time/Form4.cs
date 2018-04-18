@@ -63,7 +63,7 @@ namespace Time
             this.loginDTableTableAdapter1.Fill(this.dataBaseDataSet.LoginDTable);
         
             this.payTableTableAdapter1.Fill(this.dataBaseDataSet.PayTable);
-
+            label29.Text = Form1.PassingText2;
             label11.Text = Form1.PassingText;
             label24.Text = Form2.GridRowCount.ToString();
             Month = Form2.FormMonth;
@@ -448,5 +448,12 @@ namespace Time
           
         }
         #endregion
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

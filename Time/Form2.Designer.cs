@@ -110,6 +110,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             startTimeLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
             startLunchLabel = new System.Windows.Forms.Label();
@@ -238,7 +239,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 21);
+            this.label1.Location = new System.Drawing.Point(15, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 4;
@@ -248,7 +249,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 21);
+            this.label2.Location = new System.Drawing.Point(229, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 5;
@@ -272,7 +273,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(594, 74);
+            this.button5.Location = new System.Drawing.Point(593, 74);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 8;
@@ -788,6 +789,7 @@
             this.button11.TabIndex = 70;
             this.button11.Text = "Show";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // newWorkingHoursTableTableAdapter1
@@ -814,7 +816,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo;
+            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 337);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(281, 107);
@@ -824,7 +826,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg;
+            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg1;
             this.pictureBox2.Location = new System.Drawing.Point(513, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 48);
@@ -835,7 +837,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg;
+            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg1;
             this.pictureBox3.Location = new System.Drawing.Point(417, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(57, 48);
@@ -846,7 +848,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg;
+            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg1;
             this.pictureBox4.Location = new System.Drawing.Point(302, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 48);
@@ -855,11 +857,23 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(15, 17);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 19);
+            this.label18.TabIndex = 75;
+            this.label18.Text = "Username";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 459);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(884, 488);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -908,8 +922,8 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(900, 498);
-            this.MinimumSize = new System.Drawing.Size(900, 498);
+            this.MaximumSize = new System.Drawing.Size(900, 527);
+            this.MinimumSize = new System.Drawing.Size(900, 527);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -1006,5 +1020,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label18;
     }
 }

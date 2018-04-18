@@ -89,7 +89,15 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
               <Mapping SourceColumn="NI_Number" DataSetColumn="NI_Number" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Search">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillB" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillB" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillB">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Number FROM dbo.LoginDTable</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Search">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI_Number
@@ -101,7 +109,7 @@ WHERE        (Username LIKE @Name + N'%')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchG" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchG" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SearchG">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Searchb" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Searchb" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="Searchb">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI_Number
@@ -113,7 +121,19 @@ WHERE        (Username LIKE @Name + N'%')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchUser" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SearchUser">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchG" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchG" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SearchG">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI_Number
+FROM            LoginDTable
+WHERE        (Username LIKE @Name + N'%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Name" ColumnName="Username" DataSourceName="[DataBase].dbo.LoginDTable" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.LoginDTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchUser" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SearchUser">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI_Number
@@ -310,7 +330,7 @@ SELECT StartTime, EndTime, StartLunch, EndLunch, Job, Overtime, Date, UniqueID, 
               <Mapping SourceColumn="Categories" DataSetColumn="Categories" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.NewWorkingHoursTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchT" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchT" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SearchT">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.NewWorkingHoursTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchT" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchT" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SearchT">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        StartTime, EndTime, StartLunch, EndLunch, Job, Overtime, Date, UniqueID, HoursWorked, Categories
@@ -322,7 +342,7 @@ WHERE        (Categories LIKE @Name + N'%')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.NewWorkingHoursTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchUserName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchUserName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SearchUserName">
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectName="[DataBase].dbo.NewWorkingHoursTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchUserName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchUserName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SearchUserName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT        StartTime, EndTime, StartLunch, EndLunch, Job, Overtime, Date, UniqueID, HoursWorked, Categories
@@ -421,7 +441,7 @@ WHERE        (SearchName LIKE @Name + N'%')</CommandText>
   <xs:element name="DataBaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataBaseDataSet" msprop:Generator_UserDSName="DataBaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="LoginDTable" msprop:Generator_TableClassName="LoginDTableDataTable" msprop:Generator_TableVarName="tableLoginDTable" msprop:Generator_RowChangedName="LoginDTableRowChanged" msprop:Generator_TablePropName="LoginDTable" msprop:Generator_RowDeletingName="LoginDTableRowDeleting" msprop:Generator_RowChangingName="LoginDTableRowChanging" msprop:Generator_RowEvHandlerName="LoginDTableRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginDTableRowDeleted" msprop:Generator_RowClassName="LoginDTableRow" msprop:Generator_UserTableName="LoginDTable" msprop:Generator_RowEvArgName="LoginDTableRowChangeEvent">
+        <xs:element name="LoginDTable" msprop:Generator_TableClassName="LoginDTableDataTable" msprop:Generator_TableVarName="tableLoginDTable" msprop:Generator_TablePropName="LoginDTable" msprop:Generator_RowDeletingName="LoginDTableRowDeleting" msprop:Generator_RowChangingName="LoginDTableRowChanging" msprop:Generator_RowEvHandlerName="LoginDTableRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginDTableRowDeleted" msprop:Generator_UserTableName="LoginDTable" msprop:Generator_RowChangedName="LoginDTableRowChanged" msprop:Generator_RowEvArgName="LoginDTableRowChangeEvent" msprop:Generator_RowClassName="LoginDTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Username" msprop:Generator_ColumnVarNameInTable="columnUsername" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_UserColumnName="Username">
@@ -476,7 +496,7 @@ WHERE        (SearchName LIKE @Name + N'%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CalenderTable" msprop:Generator_TableClassName="CalenderTableDataTable" msprop:Generator_TableVarName="tableCalenderTable" msprop:Generator_TablePropName="CalenderTable" msprop:Generator_RowDeletingName="CalenderTableRowDeleting" msprop:Generator_RowChangingName="CalenderTableRowChanging" msprop:Generator_RowEvHandlerName="CalenderTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CalenderTableRowDeleted" msprop:Generator_UserTableName="CalenderTable" msprop:Generator_RowChangedName="CalenderTableRowChanged" msprop:Generator_RowEvArgName="CalenderTableRowChangeEvent" msprop:Generator_RowClassName="CalenderTableRow">
+        <xs:element name="CalenderTable" msprop:Generator_TableClassName="CalenderTableDataTable" msprop:Generator_TableVarName="tableCalenderTable" msprop:Generator_RowChangedName="CalenderTableRowChanged" msprop:Generator_TablePropName="CalenderTable" msprop:Generator_RowDeletingName="CalenderTableRowDeleting" msprop:Generator_RowChangingName="CalenderTableRowChanging" msprop:Generator_RowEvHandlerName="CalenderTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CalenderTableRowDeleted" msprop:Generator_RowClassName="CalenderTableRow" msprop:Generator_UserTableName="CalenderTable" msprop:Generator_RowEvArgName="CalenderTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date">
@@ -517,7 +537,7 @@ WHERE        (SearchName LIKE @Name + N'%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NewWorkingHoursTable" msprop:Generator_TableClassName="NewWorkingHoursTableDataTable" msprop:Generator_TableVarName="tableNewWorkingHoursTable" msprop:Generator_TablePropName="NewWorkingHoursTable" msprop:Generator_RowDeletingName="NewWorkingHoursTableRowDeleting" msprop:Generator_RowChangingName="NewWorkingHoursTableRowChanging" msprop:Generator_RowEvHandlerName="NewWorkingHoursTableRowChangeEventHandler" msprop:Generator_RowDeletedName="NewWorkingHoursTableRowDeleted" msprop:Generator_UserTableName="NewWorkingHoursTable" msprop:Generator_RowChangedName="NewWorkingHoursTableRowChanged" msprop:Generator_RowEvArgName="NewWorkingHoursTableRowChangeEvent" msprop:Generator_RowClassName="NewWorkingHoursTableRow">
+        <xs:element name="NewWorkingHoursTable" msprop:Generator_TableClassName="NewWorkingHoursTableDataTable" msprop:Generator_TableVarName="tableNewWorkingHoursTable" msprop:Generator_RowChangedName="NewWorkingHoursTableRowChanged" msprop:Generator_TablePropName="NewWorkingHoursTable" msprop:Generator_RowDeletingName="NewWorkingHoursTableRowDeleting" msprop:Generator_RowChangingName="NewWorkingHoursTableRowChanging" msprop:Generator_RowEvHandlerName="NewWorkingHoursTableRowChangeEventHandler" msprop:Generator_RowDeletedName="NewWorkingHoursTableRowDeleted" msprop:Generator_RowClassName="NewWorkingHoursTableRow" msprop:Generator_UserTableName="NewWorkingHoursTable" msprop:Generator_RowEvArgName="NewWorkingHoursTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="StartTime" msprop:Generator_ColumnVarNameInTable="columnStartTime" msprop:Generator_ColumnPropNameInRow="StartTime" msprop:Generator_ColumnPropNameInTable="StartTimeColumn" msprop:Generator_UserColumnName="StartTime" minOccurs="0">
@@ -593,7 +613,7 @@ WHERE        (SearchName LIKE @Name + N'%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PayTable" msprop:Generator_TableClassName="PayTableDataTable" msprop:Generator_TableVarName="tablePayTable" msprop:Generator_TablePropName="PayTable" msprop:Generator_RowDeletingName="PayTableRowDeleting" msprop:Generator_RowChangingName="PayTableRowChanging" msprop:Generator_RowEvHandlerName="PayTableRowChangeEventHandler" msprop:Generator_RowDeletedName="PayTableRowDeleted" msprop:Generator_UserTableName="PayTable" msprop:Generator_RowChangedName="PayTableRowChanged" msprop:Generator_RowEvArgName="PayTableRowChangeEvent" msprop:Generator_RowClassName="PayTableRow">
+        <xs:element name="PayTable" msprop:Generator_TableClassName="PayTableDataTable" msprop:Generator_TableVarName="tablePayTable" msprop:Generator_RowChangedName="PayTableRowChanged" msprop:Generator_TablePropName="PayTable" msprop:Generator_RowDeletingName="PayTableRowDeleting" msprop:Generator_RowChangingName="PayTableRowChanging" msprop:Generator_RowEvHandlerName="PayTableRowChangeEventHandler" msprop:Generator_RowDeletedName="PayTableRowDeleted" msprop:Generator_RowClassName="PayTableRow" msprop:Generator_UserTableName="PayTable" msprop:Generator_RowEvArgName="PayTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MonthlyPay" msprop:Generator_ColumnVarNameInTable="columnMonthlyPay" msprop:Generator_ColumnPropNameInRow="MonthlyPay" msprop:Generator_ColumnPropNameInTable="MonthlyPayColumn" msprop:Generator_UserColumnName="MonthlyPay" minOccurs="0">

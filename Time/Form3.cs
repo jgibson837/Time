@@ -37,6 +37,7 @@ namespace Time
             richTextBox1.Enabled = false;
             clientTextBox.Enabled = false;
             textBox2.Visible = false;
+            label4.Text = Form1.PassingText2;
             label2.Text = Form1.PassingText;
             timer1.Start();
 

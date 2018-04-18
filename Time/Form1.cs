@@ -21,15 +21,16 @@ namespace Time
         public string Client_Services = "Client Services";
         public string Configurator = "Configurator";
 
-        public string D1 = "Northern Ireland";
-        public string D2 = "England";
-        public string D3 = "Ireland";
+        public string D1 = "Belfast";
+        public string D2 = "Singapore";
+        public string D3 = "Denver";
 
-        public string E1 = "Luna";
-        public string E2 = "Kimmy";
-        public string E3 = "Stella";
+        public string E1 = "NiSoft";
+        public string E2 = "Nisoft";
+        public string E3 = "Nisoft";
 
         public static string PassingText;
+        public static string PassingText2;
         public static string PassingJobRole;
         #endregion
 
@@ -67,6 +68,15 @@ namespace Time
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            PassingText2 = textBox4.Text;
+            try
+            {
+             //   this.loginDTableTableAdapter1.Searchb(this.dataBaseDataSet.LoginDTable, nameToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
         #endregion
 
@@ -77,6 +87,7 @@ namespace Time
             {
                 if (panel3.Visible == false)
                 {
+                   // PassingText = full_nameTextBox.Text;
                     panel3.Visible = true;
                     panel2.Visible = false;
                     full_nameTextBox.Text = "";
@@ -232,5 +243,23 @@ namespace Time
         }
         #endregion
 
+        private void fillBToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.loginDTableTableAdapter1.FillB(this.dataBaseDataSet.LoginDTable);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void searchbToolStripButton_Click(object sender, EventArgs e)
+        {
+           
+
+        }
     }
 }

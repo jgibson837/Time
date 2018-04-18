@@ -2764,7 +2764,7 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Number" +
@@ -2772,10 +2772,9 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI" +
-                "_Number\r\nFROM            LoginDTable\r\nWHERE        (Username LIKE @Name + N\'%\')";
+            this._commandCollection[1].CommandText = "SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Number" +
+                " FROM dbo.LoginDTable";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI" +
@@ -2788,6 +2787,18 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
                 "_Number\r\nFROM            LoginDTable\r\nWHERE        (Username LIKE @Name + N\'%\')";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI" +
+                "_Number\r\nFROM            LoginDTable\r\nWHERE        (Username LIKE @Name + N\'%\')";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT        Username, Password, Full_name, Department, Employer, [Job Role], NI" +
+                "_Number\r\nFROM            LoginDTable\r\nWHERE        (Username LIKE @Name + N\'%\')";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2818,14 +2829,8 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Search(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
+        public virtual int FillB(DataBaseDataSet.LoginDTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2837,7 +2842,7 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchG(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
+        public virtual int Search(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
@@ -2856,8 +2861,46 @@ SELECT Username, Password, Full_name, Department, Employer, [Job Role], NI_Numbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchUser(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
+        public virtual int Searchb(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SearchG(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SearchUser(DataBaseDataSet.LoginDTableDataTable dataTable, string Name) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }

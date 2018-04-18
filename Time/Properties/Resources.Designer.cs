@@ -73,9 +73,9 @@ namespace Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cat {
+        internal static System.Drawing.Bitmap calendarimg1 {
             get {
-                object obj = ResourceManager.GetObject("cat", resourceCulture);
+                object obj = ResourceManager.GetObject("calendarimg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +86,16 @@ namespace Time.Properties {
         internal static System.Drawing.Bitmap homeimg {
             get {
                 object obj = ResourceManager.GetObject("homeimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homeimg1 {
+            get {
+                object obj = ResourceManager.GetObject("homeimg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,29 @@ namespace Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nisoftlogo1 {
+            get {
+                object obj = ResourceManager.GetObject("nisoftlogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap payslipimg {
             get {
                 object obj = ResourceManager.GetObject("payslipimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap payslipimg1 {
+            get {
+                object obj = ResourceManager.GetObject("payslipimg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

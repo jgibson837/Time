@@ -71,6 +71,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             dateLabel = new System.Windows.Forms.Label();
             notesLabel = new System.Windows.Forms.Label();
             clientLabel = new System.Windows.Forms.Label();
@@ -91,7 +92,7 @@
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(526, 346);
+            dateLabel.Location = new System.Drawing.Point(1000, 305);
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new System.Drawing.Size(33, 13);
             dateLabel.TabIndex = 6;
@@ -100,7 +101,7 @@
             // notesLabel
             // 
             notesLabel.AutoSize = true;
-            notesLabel.Location = new System.Drawing.Point(563, 378);
+            notesLabel.Location = new System.Drawing.Point(901, 337);
             notesLabel.Name = "notesLabel";
             notesLabel.Size = new System.Drawing.Size(38, 13);
             notesLabel.TabIndex = 8;
@@ -119,7 +120,7 @@
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Location = new System.Drawing.Point(664, 317);
+            userLabel.Location = new System.Drawing.Point(1002, 276);
             userLabel.Name = "userLabel";
             userLabel.Size = new System.Drawing.Size(32, 13);
             userLabel.TabIndex = 49;
@@ -128,7 +129,7 @@
             // uniqueNumberLabel
             // 
             uniqueNumberLabel.AutoSize = true;
-            uniqueNumberLabel.Location = new System.Drawing.Point(526, 333);
+            uniqueNumberLabel.Location = new System.Drawing.Point(1000, 292);
             uniqueNumberLabel.Name = "uniqueNumberLabel";
             uniqueNumberLabel.Size = new System.Drawing.Size(84, 13);
             uniqueNumberLabel.TabIndex = 50;
@@ -137,7 +138,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(526, 321);
+            label3.Location = new System.Drawing.Point(1000, 280);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(41, 13);
             label3.TabIndex = 52;
@@ -159,7 +160,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(570, 318);
+            this.textBox1.Location = new System.Drawing.Point(899, 257);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
@@ -207,7 +208,7 @@
             // dateTextBox
             // 
             this.dateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.calenderTableBindingSource1, "Date", true));
-            this.dateTextBox.Location = new System.Drawing.Point(570, 343);
+            this.dateTextBox.Location = new System.Drawing.Point(908, 302);
             this.dateTextBox.Name = "dateTextBox";
             this.dateTextBox.Size = new System.Drawing.Size(100, 20);
             this.dateTextBox.TabIndex = 7;
@@ -215,7 +216,7 @@
             // notesTextBox
             // 
             this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.calenderTableBindingSource1, "Notes", true));
-            this.notesTextBox.Location = new System.Drawing.Point(607, 375);
+            this.notesTextBox.Location = new System.Drawing.Point(945, 337);
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.Size = new System.Drawing.Size(100, 20);
             this.notesTextBox.TabIndex = 9;
@@ -262,10 +263,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo;
-            this.pictureBox1.Location = new System.Drawing.Point(515, 317);
+            this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo1;
+            this.pictureBox1.Location = new System.Drawing.Point(454, 272);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 129);
+            this.pictureBox1.Size = new System.Drawing.Size(331, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -277,11 +278,10 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(96, 272);
+            this.comboBox2.Location = new System.Drawing.Point(96, 277);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 23;
-            this.comboBox2.Visible = false;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button7
@@ -312,7 +312,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 273);
+            this.textBox2.Location = new System.Drawing.Point(95, 277);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 27;
@@ -327,7 +327,7 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.calenderTableDataGridView.DataSource = this.calenderTableBindingSource1;
-            this.calenderTableDataGridView.Location = new System.Drawing.Point(529, 362);
+            this.calenderTableDataGridView.Location = new System.Drawing.Point(1000, 357);
             this.calenderTableDataGridView.Name = "calenderTableDataGridView";
             this.calenderTableDataGridView.Size = new System.Drawing.Size(243, 78);
             this.calenderTableDataGridView.TabIndex = 27;
@@ -353,7 +353,7 @@
             // clientTextBox
             // 
             this.clientTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.calenderTableBindingSource1, "Client", true));
-            this.clientTextBox.Location = new System.Drawing.Point(96, 272);
+            this.clientTextBox.Location = new System.Drawing.Point(95, 278);
             this.clientTextBox.Name = "clientTextBox";
             this.clientTextBox.Size = new System.Drawing.Size(100, 20);
             this.clientTextBox.TabIndex = 28;
@@ -376,7 +376,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 22);
+            this.label2.Location = new System.Drawing.Point(180, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 23);
             this.label2.TabIndex = 49;
@@ -385,7 +385,7 @@
             // userTextBox
             // 
             this.userTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.calenderTableBindingSource1, "User", true));
-            this.userTextBox.Location = new System.Drawing.Point(653, 333);
+            this.userTextBox.Location = new System.Drawing.Point(1023, 305);
             this.userTextBox.Name = "userTextBox";
             this.userTextBox.Size = new System.Drawing.Size(100, 20);
             this.userTextBox.TabIndex = 50;
@@ -393,7 +393,7 @@
             // uniqueNumberTextBox
             // 
             this.uniqueNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.calenderTableBindingSource1, "UniqueNumber", true));
-            this.uniqueNumberTextBox.Location = new System.Drawing.Point(616, 330);
+            this.uniqueNumberTextBox.Location = new System.Drawing.Point(1005, 246);
             this.uniqueNumberTextBox.Name = "uniqueNumberTextBox";
             this.uniqueNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.uniqueNumberTextBox.TabIndex = 51;
@@ -410,7 +410,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(615, 339);
+            this.textBox3.Location = new System.Drawing.Point(908, 220);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 53;
@@ -430,7 +430,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg;
+            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg1;
             this.pictureBox4.Location = new System.Drawing.Point(262, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(67, 53);
@@ -441,7 +441,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg;
+            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg1;
             this.pictureBox3.Location = new System.Drawing.Point(399, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(67, 53);
@@ -452,7 +452,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg;
+            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg1;
             this.pictureBox2.Location = new System.Drawing.Point(543, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(67, 53);
@@ -461,11 +461,24 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 23);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "Username";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 461);
+            this.ClientSize = new System.Drawing.Size(884, 488);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -484,7 +497,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -495,9 +507,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.monthCalendar1);
-            this.MaximumSize = new System.Drawing.Size(876, 500);
-            this.MinimumSize = new System.Drawing.Size(876, 500);
+            this.MaximumSize = new System.Drawing.Size(900, 527);
+            this.MinimumSize = new System.Drawing.Size(900, 527);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calender";
@@ -554,5 +565,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
     }
 }

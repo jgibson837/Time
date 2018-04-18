@@ -151,6 +151,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label29 = new System.Windows.Forms.Label();
             overtimeLabel = new System.Windows.Forms.Label();
             monthlyPayLabel = new System.Windows.Forms.Label();
             uniqueNumberLabel = new System.Windows.Forms.Label();
@@ -193,7 +194,7 @@
             // overtimeLabel
             // 
             overtimeLabel.AutoSize = true;
-            overtimeLabel.Location = new System.Drawing.Point(781, 276);
+            overtimeLabel.Location = new System.Drawing.Point(964, 270);
             overtimeLabel.Name = "overtimeLabel";
             overtimeLabel.Size = new System.Drawing.Size(52, 13);
             overtimeLabel.TabIndex = 73;
@@ -202,7 +203,7 @@
             // monthlyPayLabel
             // 
             monthlyPayLabel.AutoSize = true;
-            monthlyPayLabel.Location = new System.Drawing.Point(714, 168);
+            monthlyPayLabel.Location = new System.Drawing.Point(897, 162);
             monthlyPayLabel.Name = "monthlyPayLabel";
             monthlyPayLabel.Size = new System.Drawing.Size(68, 13);
             monthlyPayLabel.TabIndex = 80;
@@ -211,7 +212,7 @@
             // uniqueNumberLabel
             // 
             uniqueNumberLabel.AutoSize = true;
-            uniqueNumberLabel.Location = new System.Drawing.Point(706, 145);
+            uniqueNumberLabel.Location = new System.Drawing.Point(889, 139);
             uniqueNumberLabel.Name = "uniqueNumberLabel";
             uniqueNumberLabel.Size = new System.Drawing.Size(84, 13);
             uniqueNumberLabel.TabIndex = 81;
@@ -220,7 +221,7 @@
             // theDateLabel
             // 
             theDateLabel.AutoSize = true;
-            theDateLabel.Location = new System.Drawing.Point(727, 401);
+            theDateLabel.Location = new System.Drawing.Point(892, 384);
             theDateLabel.Name = "theDateLabel";
             theDateLabel.Size = new System.Drawing.Size(55, 13);
             theDateLabel.TabIndex = 82;
@@ -229,7 +230,7 @@
             // searchNameLabel
             // 
             searchNameLabel.AutoSize = true;
-            searchNameLabel.Location = new System.Drawing.Point(719, 279);
+            searchNameLabel.Location = new System.Drawing.Point(902, 273);
             searchNameLabel.Name = "searchNameLabel";
             searchNameLabel.Size = new System.Drawing.Size(75, 13);
             searchNameLabel.TabIndex = 96;
@@ -257,6 +258,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(12, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 50);
@@ -608,7 +610,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.loginDTableDataGridView.DataSource = this.loginDTableBindingSource1;
-            this.loginDTableDataGridView.Location = new System.Drawing.Point(784, 21);
+            this.loginDTableDataGridView.Location = new System.Drawing.Point(967, 15);
             this.loginDTableDataGridView.Name = "loginDTableDataGridView";
             this.loginDTableDataGridView.Size = new System.Drawing.Size(100, 110);
             this.loginDTableDataGridView.TabIndex = 60;
@@ -652,7 +654,7 @@
             // textBox13
             // 
             this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Job Role", true));
-            this.textBox13.Location = new System.Drawing.Point(735, 108);
+            this.textBox13.Location = new System.Drawing.Point(918, 102);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(33, 20);
             this.textBox13.TabIndex = 61;
@@ -661,7 +663,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(719, 89);
+            this.label1.Location = new System.Drawing.Point(902, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 62;
@@ -703,7 +705,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(703, 108);
+            this.label10.Location = new System.Drawing.Point(886, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 13);
             this.label10.TabIndex = 64;
@@ -749,7 +751,7 @@
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
             this.newWorkingHoursTableDataGridView.DataSource = this.newWorkingHoursTableBindingSource1;
-            this.newWorkingHoursTableDataGridView.Location = new System.Drawing.Point(746, 149);
+            this.newWorkingHoursTableDataGridView.Location = new System.Drawing.Point(929, 143);
             this.newWorkingHoursTableDataGridView.Name = "newWorkingHoursTableDataGridView";
             this.newWorkingHoursTableDataGridView.Size = new System.Drawing.Size(100, 108);
             this.newWorkingHoursTableDataGridView.TabIndex = 68;
@@ -823,22 +825,23 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 21);
+            this.label11.Location = new System.Drawing.Point(1009, 2);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 14);
             this.label11.TabIndex = 69;
             this.label11.Text = "UserName";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(706, 225);
+            this.textBox15.Location = new System.Drawing.Point(889, 219);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 20);
             this.textBox15.TabIndex = 71;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(706, 259);
+            this.textBox16.Location = new System.Drawing.Point(889, 253);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 20);
             this.textBox16.TabIndex = 73;
@@ -865,7 +868,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(717, 392);
+            this.label18.Location = new System.Drawing.Point(882, 375);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(41, 13);
             this.label18.TabIndex = 75;
@@ -874,7 +877,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(706, 366);
+            this.label19.Location = new System.Drawing.Point(1000, 349);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 13);
             this.label19.TabIndex = 76;
@@ -883,7 +886,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(706, 345);
+            this.label20.Location = new System.Drawing.Point(1000, 328);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(41, 13);
             this.label20.TabIndex = 77;
@@ -896,15 +899,16 @@
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(12, 464);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(386, 18);
+            this.label21.Size = new System.Drawing.Size(514, 18);
             this.label21.TabIndex = 78;
-            this.label21.Text = "OVERTIME WARNING - PLEASE CONTACT MANAGER\r\n";
+            this.label21.Text = "WORKING HOURS NOT MET WARNING - PLEASE CONTACT MANAGER\r\n";
             this.label21.Visible = false;
+        //  this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(719, 414);
+            this.label22.Location = new System.Drawing.Point(884, 397);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 13);
             this.label22.TabIndex = 79;
@@ -1016,7 +1020,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(727, 426);
+            this.label24.Location = new System.Drawing.Point(892, 409);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(34, 13);
             this.label24.TabIndex = 80;
@@ -1025,7 +1029,7 @@
             // monthlyPayTextBox
             // 
             this.monthlyPayTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payTableBindingSource1, "MonthlyPay", true));
-            this.monthlyPayTextBox.Location = new System.Drawing.Point(788, 165);
+            this.monthlyPayTextBox.Location = new System.Drawing.Point(971, 159);
             this.monthlyPayTextBox.Name = "monthlyPayTextBox";
             this.monthlyPayTextBox.Size = new System.Drawing.Size(100, 20);
             this.monthlyPayTextBox.TabIndex = 81;
@@ -1033,7 +1037,7 @@
             // uniqueNumberTextBox
             // 
             this.uniqueNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payTableBindingSource1, "UniqueNumber", true));
-            this.uniqueNumberTextBox.Location = new System.Drawing.Point(796, 142);
+            this.uniqueNumberTextBox.Location = new System.Drawing.Point(979, 136);
             this.uniqueNumberTextBox.Name = "uniqueNumberTextBox";
             this.uniqueNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.uniqueNumberTextBox.TabIndex = 82;
@@ -1041,7 +1045,7 @@
             // theDateTextBox
             // 
             this.theDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payTableBindingSource1, "TheDate", true));
-            this.theDateTextBox.Location = new System.Drawing.Point(706, 142);
+            this.theDateTextBox.Location = new System.Drawing.Point(889, 136);
             this.theDateTextBox.Name = "theDateTextBox";
             this.theDateTextBox.Size = new System.Drawing.Size(100, 20);
             this.theDateTextBox.TabIndex = 83;
@@ -1049,7 +1053,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(727, 449);
+            this.label25.Location = new System.Drawing.Point(892, 432);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(31, 13);
             this.label25.TabIndex = 84;
@@ -1058,7 +1062,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(743, 379);
+            this.label26.Location = new System.Drawing.Point(908, 362);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(44, 13);
             this.label26.TabIndex = 86;
@@ -1067,7 +1071,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(730, 319);
+            this.label27.Location = new System.Drawing.Point(895, 302);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(60, 13);
             this.label27.TabIndex = 87;
@@ -1163,7 +1167,7 @@
             // searchNameTextBox
             // 
             this.searchNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.payTableBindingSource1, "SearchName", true));
-            this.searchNameTextBox.Location = new System.Drawing.Point(784, 307);
+            this.searchNameTextBox.Location = new System.Drawing.Point(949, 290);
             this.searchNameTextBox.Name = "searchNameTextBox";
             this.searchNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.searchNameTextBox.TabIndex = 97;
@@ -1191,7 +1195,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg;
+            this.pictureBox4.Image = global::Time.Properties.Resources.homeimg1;
             this.pictureBox4.Location = new System.Drawing.Point(194, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(57, 48);
@@ -1202,7 +1206,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg;
+            this.pictureBox3.Image = global::Time.Properties.Resources.calendarimg1;
             this.pictureBox3.Location = new System.Drawing.Point(305, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(57, 48);
@@ -1213,7 +1217,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg;
+            this.pictureBox2.Image = global::Time.Properties.Resources.payslipimg1;
             this.pictureBox2.Location = new System.Drawing.Point(421, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(57, 48);
@@ -1222,11 +1226,23 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(12, 21);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(33, 14);
+            this.label29.TabIndex = 101;
+            this.label29.Text = "Date";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 488);
+            this.ClientSize = new System.Drawing.Size(884, 488);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -1258,7 +1274,6 @@
             this.Controls.Add(this.overtimeTextBox);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.newWorkingHoursTableDataGridView);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label10);
@@ -1289,10 +1304,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
-            this.MaximumSize = new System.Drawing.Size(715, 527);
-            this.MinimumSize = new System.Drawing.Size(715, 527);
+            this.MaximumSize = new System.Drawing.Size(900, 527);
+            this.MinimumSize = new System.Drawing.Size(900, 527);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payslip";
@@ -1468,5 +1482,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label29;
     }
 }

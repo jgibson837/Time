@@ -80,7 +80,7 @@ namespace Time
         private void Form2_Load(object sender, EventArgs e)
         {
             this.newWorkingHoursTableTableAdapter1.Fill(this.dataBaseDataSet.NewWorkingHoursTable);
-            textBox1.Text = Form1.PassingText;
+            label18.Text = Form1.PassingText2;
             label5.Text = Form1.PassingJobRole;
             categoriesTextBox.Text = textBox1.Text;
             label2.Text = textBox1.Text;
