@@ -46,6 +46,7 @@ namespace Time
         public string Junior_Developer = "Junior Developer";
         public string Client_Services = "Client Services";
         public string Configurator = "Configurator";
+        //Job roles
         string totalhours;
         string totalovertime;
         #endregion
@@ -63,11 +64,13 @@ namespace Time
             this.loginDTableTableAdapter1.Fill(this.dataBaseDataSet.LoginDTable);
         
             this.payTableTableAdapter1.Fill(this.dataBaseDataSet.PayTable);
+            //On form load three different datagridview will be filled 
             label29.Text = Form1.PassingText2;
             label11.Text = Form1.PassingText;
             label24.Text = Form2.GridRowCount.ToString();
             Month = Form2.FormMonth;
             Year = Form2.FormYear;
+            //Accesses values from form1 and form 2 
 
             timer1.Start();
 
@@ -81,6 +84,8 @@ namespace Time
             label26.Text = PayDay.ToString();
 
             label27.Text = DateTime.Now.ToString("dd");
+            //Works out the pay day
+            //Sets current time and date 
 
             #region PAYDAY
             if (CurrentDay == PayDay)
@@ -107,6 +112,7 @@ namespace Time
                 this.Validate();
                 this.payTableBindingSource.EndEdit();
                 this.tableAdapterManager2.UpdateAll(this.loginDDataSet4);
+                //If the current day is the payday of the month then this will add a new row fill the row with pay values then save 
             }
             #endregion
 
@@ -136,6 +142,7 @@ namespace Time
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            //These three search querys handle searching for the data associated only with the currently logged in user 
 
             #endregion
         }
@@ -165,6 +172,7 @@ namespace Time
                 HourlyRate = 10;
             }
             textBox9.Text = HourlyRate.ToString();
+            //This sets how much money per hour the user with certain job roles will be earning 
         }
         #endregion
 
@@ -175,6 +183,7 @@ namespace Time
             label28.Text = DateTime.Now.ToString("dd/MM/yyyy");
             CurrentDay = Convert.ToInt32(label27.Text);
             textBox3.Text = DateTime.Now.ToShortDateString();
+            //Displays the current time to a textbox
             #endregion
 
             #region Standard Pay
@@ -203,6 +212,8 @@ namespace Time
             }
           
             label20.Text = "£" + TotalPay.ToString(); //Total Pay Text Box
+
+            //This works out the total pay would would recieve without overtime being involved 
             //////////////////////////////////////////////////////////////////////////////////
             #endregion
 
@@ -233,6 +244,7 @@ namespace Time
                     break;
             }
             label19.Text = "£" + TotalovertimePay.ToString(); //Total Pay Text Box
+            //This works out the total pay would would recieve with overtime being involved 
             //////////////////////////////////////////////////////////////////////////
             #endregion
 
@@ -242,11 +254,14 @@ namespace Time
                 label21.Visible = true;
                 StandardPay_Overtimepay = TotalPay;
                 textBox10.Text = "£" + TotalPay.ToString();
+                //Standard pay without overtime displayed on a textbox
 
-            } else
+            }
+            else
             {
                 StandardPay_Overtimepay = TotalovertimePay + TotalPay;
                 textBox10.Text = "£" + StandardPay_Overtimepay.ToString();
+                //Standard pay with overtime displayed on a textbox
             }
             #endregion
 
@@ -283,11 +298,13 @@ namespace Time
             {
                 TAX = 0;
             }
+            //My forumale for how the tax due is to be worked out
             #endregion
 
             #region Deductions 
             NetPay = StandardPay_Overtimepay - Deductions;
             textBox12.Text = "£" + NetPay.ToString();
+            //This is the tax or deductions that are taken away from total pay to leave you with net pay
             #endregion
         }
         #endregion
@@ -300,7 +317,8 @@ namespace Time
                 Form1 Form1 = new Form1();
                 Form1.Show();
                 this.Hide();
-            }
+                //Logout button displays a message box with a yes or no with no closing the message box and yes causing the current form to hide and the login screen to display 
+        }
         }
         #endregion
 
@@ -310,6 +328,7 @@ namespace Time
             Form2 Form2 = new Form2();
             Form2.Show();
             this.Hide();
+            //Opens a new form and closes the current
         }
         #endregion
 
@@ -319,6 +338,7 @@ namespace Time
             Form3 Form3 = new Form3();
             Form3.Show();
             this.Hide();
+            //Opens a new form and closes the current
         }
         #endregion
 
@@ -328,6 +348,7 @@ namespace Time
             Form4 Form4 = new Form4();
             Form4.Show();
             this.Hide();
+            //Opens a new form and closes the current
         }
         #endregion
 
@@ -349,6 +370,7 @@ namespace Time
             {
                 panel15.Visible = false;
                 button11.Text = "Show";
+                //Monthly pay panel hide/show
             }
         }
         #endregion
@@ -381,6 +403,9 @@ namespace Time
                 this.Validate();
                 this.payTableBindingSource.EndEdit();
                 this.tableAdapterManager2.UpdateAll(this.loginDDataSet4);
+                //Sets the current date 
+                //A unique value is saved to the database 
+                //Monthly pay is saved to the database 
             }
         }
 
@@ -400,113 +425,41 @@ namespace Time
             {
                 panel16.Visible = false;
                 button5.Text = "Payment Records";
+                //Monthly pay panel hide/show
             }
         }
-
-
-
-
 
         #endregion
 
         #region PictureBoxHomeButton
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            
-          
                 Form2 Form2 = new Form2();
                 Form2.Show();
-                this.Hide();
-            
-            
+                this.Hide();  
+               //Open new form and close current 
         }
         #endregion
 
         #region PictureBoxCalendarButton
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-          
-            
                 Form3 Form3 = new Form3();
                 Form3.Show();
                 this.Hide();
-            
-           
+                //Open new form and close current
         }
         #endregion
 
         #region PictureBoxPayslipButton
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
-           
-           
                 Form4 Form4 = new Form4();
                 Form4.Show();
                 this.Hide();
-            
-          
+               //Open new form and close current
         }
         #endregion
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel13_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel14_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

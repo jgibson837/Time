@@ -40,7 +40,7 @@
             System.Windows.Forms.Label job_RoleLabel;
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label nI_NumberLabel;
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textboxUsername = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -107,7 +107,7 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(593, 185);
+            passwordLabel.Location = new System.Drawing.Point(763, 206);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(30, 13);
             passwordLabel.TabIndex = 9;
@@ -116,7 +116,7 @@
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(613, 258);
+            usernameLabel.Location = new System.Drawing.Point(783, 279);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new System.Drawing.Size(29, 13);
             usernameLabel.TabIndex = 11;
@@ -155,7 +155,7 @@
             // departmentLabel
             // 
             departmentLabel.AutoSize = true;
-            departmentLabel.Location = new System.Drawing.Point(593, 253);
+            departmentLabel.Location = new System.Drawing.Point(763, 274);
             departmentLabel.Name = "departmentLabel";
             departmentLabel.Size = new System.Drawing.Size(65, 13);
             departmentLabel.TabIndex = 24;
@@ -175,7 +175,7 @@
             // 
             employerLabel.AutoSize = true;
             employerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            employerLabel.Location = new System.Drawing.Point(637, 308);
+            employerLabel.Location = new System.Drawing.Point(783, 312);
             employerLabel.Name = "employerLabel";
             employerLabel.Size = new System.Drawing.Size(71, 18);
             employerLabel.TabIndex = 25;
@@ -184,7 +184,7 @@
             // job_RoleLabel
             // 
             job_RoleLabel.AutoSize = true;
-            job_RoleLabel.Location = new System.Drawing.Point(626, 249);
+            job_RoleLabel.Location = new System.Drawing.Point(796, 270);
             job_RoleLabel.Name = "job_RoleLabel";
             job_RoleLabel.Size = new System.Drawing.Size(52, 13);
             job_RoleLabel.TabIndex = 25;
@@ -203,23 +203,23 @@
             // nI_NumberLabel
             // 
             nI_NumberLabel.AutoSize = true;
-            nI_NumberLabel.Location = new System.Drawing.Point(611, 223);
+            nI_NumberLabel.Location = new System.Drawing.Point(781, 244);
             nI_NumberLabel.Name = "nI_NumberLabel";
             nI_NumberLabel.Size = new System.Drawing.Size(61, 13);
             nI_NumberLabel.TabIndex = 29;
             nI_NumberLabel.Text = "NI Number:";
             // 
-            // textBox1
+            // textboxUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textboxUsername.Location = new System.Drawing.Point(7, 51);
+            this.textboxUsername.Name = "textboxUsername";
+            this.textboxUsername.Size = new System.Drawing.Size(100, 20);
+            this.textboxUsername.TabIndex = 1;
+            this.textboxUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 65);
+            this.textBox2.Location = new System.Drawing.Point(148, 51);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
@@ -235,7 +235,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(449, 329);
+            this.button2.Location = new System.Drawing.Point(412, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 30);
             this.button2.TabIndex = 3;
@@ -257,7 +257,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 26);
+            this.label2.Location = new System.Drawing.Point(3, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 5;
@@ -266,7 +266,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Password", true));
-            this.passwordTextBox.Location = new System.Drawing.Point(654, 200);
+            this.passwordTextBox.Location = new System.Drawing.Point(824, 221);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(33, 20);
             this.passwordTextBox.TabIndex = 10;
@@ -284,7 +284,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Username", true));
-            this.usernameTextBox.Location = new System.Drawing.Point(616, 219);
+            this.usernameTextBox.Location = new System.Drawing.Point(786, 240);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(31, 20);
             this.usernameTextBox.TabIndex = 12;
@@ -309,10 +309,10 @@
             // 
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textboxUsername);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(170, 100);
+            this.panel2.Location = new System.Drawing.Point(162, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 152);
             this.panel2.TabIndex = 17;
@@ -328,7 +328,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(65, 107);
+            this.button4.Location = new System.Drawing.Point(60, 109);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 30);
             this.button4.TabIndex = 22;
@@ -394,7 +394,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.bSaveAccount_Click_1);
             // 
             // label3
             // 
@@ -409,7 +409,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(729, 224);
+            this.textBox3.Location = new System.Drawing.Point(875, 228);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(33, 20);
             this.textBox3.TabIndex = 6;
@@ -426,7 +426,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.loginDTableDataGridView.DataSource = this.loginDTableBindingSource1;
-            this.loginDTableDataGridView.Location = new System.Drawing.Point(599, 79);
+            this.loginDTableDataGridView.Location = new System.Drawing.Point(769, 100);
             this.loginDTableDataGridView.Name = "loginDTableDataGridView";
             this.loginDTableDataGridView.Size = new System.Drawing.Size(163, 85);
             this.loginDTableDataGridView.TabIndex = 21;
@@ -470,7 +470,7 @@
             // departmentTextBox
             // 
             this.departmentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Department", true));
-            this.departmentTextBox.Location = new System.Drawing.Point(637, 280);
+            this.departmentTextBox.Location = new System.Drawing.Point(807, 301);
             this.departmentTextBox.Name = "departmentTextBox";
             this.departmentTextBox.Size = new System.Drawing.Size(100, 20);
             this.departmentTextBox.TabIndex = 25;
@@ -478,7 +478,7 @@
             // employerTextBox
             // 
             this.employerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Employer", true));
-            this.employerTextBox.Location = new System.Drawing.Point(637, 329);
+            this.employerTextBox.Location = new System.Drawing.Point(783, 333);
             this.employerTextBox.Name = "employerTextBox";
             this.employerTextBox.Size = new System.Drawing.Size(100, 20);
             this.employerTextBox.TabIndex = 26;
@@ -486,7 +486,7 @@
             // job_RoleTextBox
             // 
             this.job_RoleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Job Role", true));
-            this.job_RoleTextBox.Location = new System.Drawing.Point(654, 51);
+            this.job_RoleTextBox.Location = new System.Drawing.Point(824, 72);
             this.job_RoleTextBox.Name = "job_RoleTextBox";
             this.job_RoleTextBox.Size = new System.Drawing.Size(100, 20);
             this.job_RoleTextBox.TabIndex = 26;
@@ -499,7 +499,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(596, 244);
+            this.label6.Location = new System.Drawing.Point(766, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(19, 13);
             this.label6.TabIndex = 27;
@@ -508,7 +508,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(637, 245);
+            this.label7.Location = new System.Drawing.Point(807, 266);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 13);
             this.label7.TabIndex = 28;
@@ -517,7 +517,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(586, 231);
+            this.label8.Location = new System.Drawing.Point(756, 252);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(19, 13);
             this.label8.TabIndex = 29;
@@ -526,7 +526,7 @@
             // nI_NumberTextBox
             // 
             this.nI_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "NI_Number", true));
-            this.nI_NumberTextBox.Location = new System.Drawing.Point(654, 174);
+            this.nI_NumberTextBox.Location = new System.Drawing.Point(824, 195);
             this.nI_NumberTextBox.Name = "nI_NumberTextBox";
             this.nI_NumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.nI_NumberTextBox.TabIndex = 30;
@@ -565,7 +565,7 @@
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.loginDTableBindingSource1, "Full_name", true));
-            this.textBox4.Location = new System.Drawing.Point(704, 251);
+            this.textBox4.Location = new System.Drawing.Point(850, 255);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(33, 20);
             this.textBox4.TabIndex = 32;
@@ -587,9 +587,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(581, 375);
+            this.ClientSize = new System.Drawing.Size(549, 376);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
@@ -614,8 +613,9 @@
             this.Controls.Add(usernameLabel);
             this.Controls.Add(this.button2);
             this.ForeColor = System.Drawing.Color.Black;
-            this.MaximumSize = new System.Drawing.Size(597, 414);
-            this.MinimumSize = new System.Drawing.Size(597, 414);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(565, 415);
+            this.MinimumSize = new System.Drawing.Size(565, 415);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -636,7 +636,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textboxUsername;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;

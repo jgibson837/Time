@@ -20,14 +20,17 @@ namespace Time
         public string Junior_Developer = "Junior Developer";
         public string Client_Services = "Client Services";
         public string Configurator = "Configurator";
+        //Job roles 
 
         public string D1 = "Belfast";
         public string D2 = "Singapore";
         public string D3 = "Denver";
+        //Departments
 
         public string E1 = "NiSoft";
         public string E2 = "Nisoft";
         public string E3 = "Nisoft";
+        //Employers
 
         public static string PassingText;
         public static string PassingText2;
@@ -53,30 +56,25 @@ namespace Time
             comboBox1.Items.Add(D1);
             comboBox1.Items.Add(D2);
             comboBox1.Items.Add(D3);
+            //Pulls data to the datagridview and sets all the combobox values and starts the department timer
         }
         #endregion
 
         #region UsernameTextBoxFieldSearch
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox3.Text = textBox1.Text;
+            textBox3.Text = textboxUsername.Text;
             try
             {
-                this.loginDTableTableAdapter1.SearchUser(this.dataBaseDataSet.LoginDTable, textBox1.Text);
+                this.loginDTableTableAdapter1.SearchUser(this.dataBaseDataSet.LoginDTable, textboxUsername.Text);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
             PassingText2 = textBox4.Text;
-            try
-            {
-             //   this.loginDTableTableAdapter1.Searchb(this.dataBaseDataSet.LoginDTable, nameToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            //When a username is input in the login screen this will search for that username
+            //Passes values to the next form 
         }
         #endregion
 
@@ -87,7 +85,7 @@ namespace Time
             {
                 if (panel3.Visible == false)
                 {
-                   // PassingText = full_nameTextBox.Text;
+                   
                     panel3.Visible = true;
                     panel2.Visible = false;
                     full_nameTextBox.Text = "";
@@ -97,6 +95,7 @@ namespace Time
                     comboBox3.Text = "";
                     this.loginDTableBindingSource1.AddNew();
                     button2.Text = "Cancel";
+                    //Adds a new row to the login data table, clears previous text to allow new input, sets button text from create account to cancel
 
                     #region RandomString
                     var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -135,12 +134,15 @@ namespace Time
                     {
                         stringChars3[i] = chars3[random3.Next(chars3.Length)];
                     }
+                    //These 3 random strings are used to set the National Insurance number 
 
                     var finalString3 = new String(stringChars3);
                     label8.Text = finalString3;
+                    
                     #endregion
 
                     nI_NumberTextBox.Text = label6.Text + label7.Text + label8.Text;
+                    //This is the end result
                 }
             } else
             {
@@ -151,6 +153,8 @@ namespace Time
                     panel3.Visible = false;
                     panel2.Visible = true;
                     button2.Text = "Create Account";
+                    //If the user presses cancel whilst in the create account process this will remove the current data and change the button text back to 
+                    //create account
                 }
             }
            
@@ -160,28 +164,33 @@ namespace Time
         #region LoginButton
         private void button4_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == passwordTextBox.Text && textBox1.Text == usernameTextBox.Text)
+            if (textBox2.Text == passwordTextBox.Text && textboxUsername.Text == usernameTextBox.Text)
             {
                 PassingText = textBox3.Text;
                 Form2 Form2 = new Form2();
                 Form2.Show();
                 this.Hide();
+                //If statement; Checks that the two text fields for username and password match those of the data on the database
+                //Passes the username value to the next form 
+                //Opens the form2 and hides this current form
             }
             else
             {
                 MessageBox.Show("Wrong username or password!");
+                //If an incorrect username of password then this message will display
             }
         }
         #endregion
 
         #region SaveButton
-        private void button1_Click_1(object sender, EventArgs e)
+        private void bSaveAccount_Click_1(object sender, EventArgs e)
         {
             try
             {
                 if (usernameTextBox1.Text == "" || passwordTextBox1.Text == "" || full_nameTextBox.Text == "" || job_RoleTextBox.Text == "" || departmentTextBox.Text == "")
                 {
                     MessageBox.Show("Don't Leave Blank!", "Error");
+                    //Data validation, checks that the new user data has all been input correctly 
                 }
 
                 else
@@ -191,6 +200,8 @@ namespace Time
                     this.Validate();
                     this.loginDTableBindingSource1.EndEdit();
                     this.tableAdapterManager1.UpdateAll(this.dataBaseDataSet);
+                    //If all data is correct it is then saved to the database
+                    //Hides the create user UI
                 }
             }
             catch (System.Data.ConstraintException ex)
@@ -198,6 +209,7 @@ namespace Time
                 MessageBox.Show("Already Present in the Database.", ex.Message);
                 panel3.Visible = true;
                 panel2.Visible = false;
+                //If the new user data is already in the database the message box will display
             }
         }
         #endregion
@@ -219,6 +231,7 @@ namespace Time
             {
                 employerTextBox.Text = E3;
             }
+            //Sets the employer name to one of the following strings depending on the department 
         }
         #endregion
 
@@ -226,6 +239,7 @@ namespace Time
         private void job_RoleTextBox_TextChanged(object sender, EventArgs e)
         {
             PassingJobRole = job_RoleTextBox.Text;
+            //Passes the job role to the next form
         }
         #endregion
 
@@ -233,6 +247,7 @@ namespace Time
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             departmentTextBox.Text = comboBox1.Text;
+            //Sets the data to be saved from the value of the combox
         }
         #endregion
 
@@ -240,28 +255,9 @@ namespace Time
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             job_RoleTextBox.Text = comboBox3.Text;
+            //Sets the data to be saved from the value of the combox
         }
         #endregion
-
-        private void fillBToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.loginDTableTableAdapter1.FillB(this.dataBaseDataSet.LoginDTable);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void searchbToolStripButton_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
       
     }
 }

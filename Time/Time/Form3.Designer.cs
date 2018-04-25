@@ -38,6 +38,8 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.calenderTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new Time.DataBaseDataSet();
             this.calenderTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginDDataSet2 = new Time.LoginDDataSet2();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +55,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.calenderTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientTextBox = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,11 +70,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.calenderTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBaseDataSet = new Time.DataBaseDataSet();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calenderTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.CalenderTableTableAdapter();
             this.tableAdapterManager1 = new Time.DataBaseDataSetTableAdapters.TableAdapterManager();
             dateLabel = new System.Windows.Forms.Label();
@@ -78,6 +78,8 @@
             userLabel = new System.Windows.Forms.Label();
             uniqueNumberLabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.calenderTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calenderTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calenderTableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dateLabel
@@ -183,6 +183,16 @@
             this.richTextBox1.Size = new System.Drawing.Size(428, 99);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            // 
+            // calenderTableBindingSource1
+            // 
+            this.calenderTableBindingSource1.DataMember = "CalenderTable";
+            this.calenderTableBindingSource1.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // calenderTableBindingSource
             // 
@@ -288,7 +298,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // timer1
             // 
@@ -364,6 +373,24 @@
             this.calenderTableDataGridView.Size = new System.Drawing.Size(324, 120);
             this.calenderTableDataGridView.TabIndex = 27;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Notes";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Notes";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Client";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Client";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // clientTextBox
             // 
             this.clientTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.calenderTableBindingSource1, "Client", true));
@@ -438,7 +465,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 27);
             this.textBox3.TabIndex = 53;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // pictureBox4
             // 
@@ -487,34 +513,6 @@
             this.label4.TabIndex = 78;
             this.label4.Text = "Username";
             // 
-            // calenderTableBindingSource1
-            // 
-            this.calenderTableBindingSource1.DataMember = "CalenderTable";
-            this.calenderTableBindingSource1.DataSource = this.dataBaseDataSet;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Notes";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Notes";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Client";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Client";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
             // calenderTableTableAdapter1
             // 
             this.calenderTableTableAdapter1.ClearBeforeFill = true;
@@ -532,7 +530,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 488);
             this.Controls.Add(this.richTextBox1);
@@ -574,6 +571,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calender";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.calenderTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calenderTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -581,8 +580,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calenderTableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

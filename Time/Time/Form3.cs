@@ -28,6 +28,7 @@ namespace Time
         {
             textBox1.Text = label2.Text + monthCalendar1.SelectionRange.Start.ToShortDateString();
             textBox3.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            //When a user clicks on a date on the calander it sets textbox data to that of the current date
         }
         #endregion
 
@@ -41,6 +42,7 @@ namespace Time
             label4.Text = Form1.PassingText2;
             label2.Text = Form1.PassingText;
             timer1.Start();
+            //This fills the datagridview for the calander table and grabs values from form 1 such as username and fullname
 
             #region LoadingCombobox
             StreamReader sr = new StreamReader(@"Combox\cat.txt");
@@ -51,6 +53,7 @@ namespace Time
                 line = sr.ReadLine();
             }
             sr.Close();
+            //This loads the text from the .txt file from the folder called combox for client names 
             #endregion
         }
         #endregion
@@ -66,6 +69,8 @@ namespace Time
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            //When the date is changed this will search for that row in the datatable in the same way it does for the 
+            //login table to find username and password
         }
         #endregion
 
@@ -79,6 +84,7 @@ namespace Time
             clientTextBox.Enabled = false;
             comboBox2.Visible = false;
             clientTextBox.Visible = true;
+            //Saves the note, date, client and user that created the row to the database 
         }
         #endregion
 
@@ -93,6 +99,8 @@ namespace Time
                     richTextBox1.Enabled = true;
                     clientTextBox.Enabled = true;
                     userTextBox.Text = label2.Text;
+                    //Adds a new row to the database 
+                    //Enables the text box so that it will accept input 
                     #region RandomString
                     var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
                     var stringChars = new char[8];
@@ -106,6 +114,7 @@ namespace Time
                     var finalString = new String(stringChars);
                     uniqueNumberTextBox.Text = finalString;
                     button2.Enabled = false;
+                    //Adds a unique value to the database, always useful 
                     #endregion
                     break;
                 case 2:
@@ -128,6 +137,7 @@ namespace Time
             clientTextBox.Enabled = false;
             comboBox2.Visible = false;
             clientTextBox.Visible = true;
+            //This will delete the currently selected row on the database 
         }
         #endregion
 
@@ -137,6 +147,7 @@ namespace Time
             Form2 Form2 = new Form2();
             Form2.Show();
             this.Hide();
+            //Opens a new form and closes the current 
         }
         #endregion
 
@@ -146,6 +157,7 @@ namespace Time
             Form3 Form3 = new Form3();
             Form3.Show();
             this.Hide();
+            //Opens a new form and closes the current 
         }
         #endregion
 
@@ -155,6 +167,7 @@ namespace Time
             Form4 Form4 = new Form4();
             Form4.Show();
             this.Hide();
+            //Opens a new form and closes the current 
         }
         #endregion
 
@@ -173,6 +186,7 @@ namespace Time
                 button3.Enabled = false;
                 value = 1;
             }
+            //This detects the change to the rich text box input, if nothing then the add note button will remain the same, but if there is text in the rich text box the add note button text changes to "edit note"
         }
         #endregion
 
@@ -185,6 +199,7 @@ namespace Time
                 comboBox2.Visible = false;
                 clientTextBox.Visible = false;
                 button8.Text = "Save New Client";
+                //Changes the button text and allows the user to add a new client into a textbox
             }
             else
             {
@@ -205,6 +220,7 @@ namespace Time
                 button8.Text = "Add New Client";
                 textBox2.Visible = false;
                 comboBox2.Visible = true;
+                //This saves the new client to the txt file and changes the button text from save new client to add new client 
             }          
         }
         #endregion
@@ -213,6 +229,7 @@ namespace Time
         private void button7_Click(object sender, EventArgs e)
         {
             comboBox2.Items.Remove(comboBox2.SelectedItem);
+            //This will remove the currently selected value from the combobox
         }
         #endregion
 
@@ -220,6 +237,7 @@ namespace Time
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             clientTextBox.Text = comboBox2.Text;
+            //Sets row value to be saved to the combobox value 
         }
         #endregion
 
@@ -231,66 +249,40 @@ namespace Time
                 Form1 Form1 = new Form1();
                 Form1.Show();
                 this.Hide();
-            }
+                //Logout button displays a message box with a yes or no with no closing the message box and yes causing the current form to hide and the login screen to display 
+        }
         }
         #endregion
-
-        private void searchCalToolStripButton_Click(object sender, EventArgs e)
-        {
-           
-
-        }
 
         #region PictureBoxHomeButton
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-           
-            
                 Form2 Form2 = new Form2();
                 Form2.Show();
                 this.Hide();
-            
+                //opens a new form and hides the current 
         }
         #endregion
 
         #region PictureBoxCalendarButton
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
-            
                 Form3 Form3 = new Form3();
                 Form3.Show();
                 this.Hide();
-            
-       
+                //opens a new form and hides the current 
         }
         #endregion
 
         #region PictureBoxPaySlipButton
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
-            
                 Form4 Form4 = new Form4();
                 Form4.Show();
                 this.Hide();
-            
-          
+                //opens a new form and hides the current 
         }
         #endregion
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
-      
+ 
     }
 }

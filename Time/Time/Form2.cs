@@ -22,6 +22,7 @@ namespace Time
         public string Junior_Developer = "Junior_Developer";
         public string Client_Services = "Client_Services";
         public string Configurator = "Configurator";
+        //Job roles 
         #endregion
 
         #region DateTime
@@ -73,6 +74,7 @@ namespace Time
             GridRowCount = Convert.ToInt32(label8.Text);
             FormMonth = Convert.ToInt32(label16.Text);
             FormYear = Convert.ToInt32(label17.Text);
+            //This is timer one it updates every second to set time and dates 
         }
         #endregion
 
@@ -86,10 +88,7 @@ namespace Time
             textBox1.Text = Form1.PassingText;
             categoriesTextBox.Text = textBox1.Text;
             label2.Text = textBox1.Text;
-           // te
             timer1.Start();
-
-           
 
             try
             {
@@ -99,6 +98,9 @@ namespace Time
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            //Fills the newworking hours datagridview
+            //Brings over the text values from the login page 
+            //Searchs the database so that the working hours displayed is that of the current logged in user 
         }
         #endregion
 
@@ -124,6 +126,9 @@ namespace Time
 
             var finalString = new String(stringChars);
             randomTextBox.Text = finalString;
+            //Adds a new row to the new working hours 
+            //Sets start day time 
+            //Creates a random unique value for the row in the datatable, always best to have a unique field 
             #endregion
         }
         #endregion
@@ -133,6 +138,7 @@ namespace Time
         {
             startLunchTextBox.Text = DateTime.Now.ToString("HH:mm");
             dt3 = DateTime.Now;
+            //Sets start lunch time 
         }
         #endregion
 
@@ -141,6 +147,7 @@ namespace Time
         {
             endLunchTextBox.Text = DateTime.Now.ToString("HH:mm");
             dt4 = DateTime.Now;  
+            //Sets end lunch time 
         }
         #endregion
 
@@ -152,7 +159,7 @@ namespace Time
             TimeSpan ts = (dt2 - dt1);
             label9.Text = ts.ToString(@"hh\:mm");
 
-            TimeSpan ts2 = (dt3 - dt4);
+            TimeSpan ts2 = (dt4 - dt3);
             label10.Text = ts2.ToString(@"hh\:mm");
 
             ts3 = (ts - ts2);
@@ -170,6 +177,8 @@ namespace Time
             this.Validate();
             this.newWorkingHoursTableBindingSource1.EndEdit();
             this.tableAdapterManager2.UpdateAll(this.dataBaseDataSet);
+            //Sets end day time 
+            //This saves all of the times for the working day to the database
         }
         #endregion
 
@@ -192,6 +201,8 @@ namespace Time
             Form3 Form3 = new Form3();
             Form3.Show();
             this.Hide();
+            //Adds up the hours worked and over time hours on the datagridview
+            //Opens a new form and closes the current 
         }
         #endregion
 
@@ -214,6 +225,8 @@ namespace Time
             Form4 Form4 = new Form4();
             Form4.Show();
             this.Hide();
+            //Adds up the hours worked and over time hours on the datagridview
+            //Opens a new form and closes the current 
         }
         #endregion
 
@@ -223,6 +236,7 @@ namespace Time
             Form2 Form2 = new Form2();
             Form2.Show();
             this.Hide();
+            //Opens a new form and closes the current
         }
         #endregion
 
@@ -234,6 +248,8 @@ namespace Time
                 Form1 Form1 = new Form1();
                 Form1.Show();
                 this.Hide();
+                //Logout button displays a message box with a yes or no with no closing the message box and yes causing the current form to hide 
+                //and the login screen to display
             } 
         }
         #endregion
@@ -246,16 +262,19 @@ namespace Time
             this.Validate();
             this.newWorkingHoursTableBindingSource1.EndEdit();
             this.tableAdapterManager2.UpdateAll(this.dataBaseDataSet);
+            //Updates the new hoursworked data to the database 
         }
-        
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             TSHOUR = Convert.ToInt32(textBox3.Text);
+            //Converts the time
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             TSMINUTE = Convert.ToInt32(textBox4.Text);
+            //Converts the time
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -265,20 +284,23 @@ namespace Time
             this.Validate();
             this.newWorkingHoursTableBindingSource1.EndEdit();
             this.tableAdapterManager2.UpdateAll(this.dataBaseDataSet);
+            //Updates the new overtime data to the database 
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             TS2HOUR = Convert.ToInt32(textBox6.Text);
+            //Converts the time
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             TS2MINUTE = Convert.ToInt32(textBox5.Text);
+            //Converts the time
         }
         #endregion
 
-        #region ShowButton
+        #region ShowButton - Test purpose only 
         private void button11_Click(object sender, EventArgs e)
         {
             if (panel2.Visible == false)
@@ -290,19 +312,13 @@ namespace Time
                 panel2.Visible = false;
                 button11.Text = "Show";
             }
+            //This is in place to hide/show the panel for setting hours worked and overtime
         }
         #endregion
-
-        private void searchUserNameToolStripButton_Click(object sender, EventArgs e)
-        {
-           
-
-        }
 
         #region CalanderPictureBoxButton 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
                 Total = 0;
 
                 for (int i = 0; i < newWorkingHoursTableDataGridView.Rows.Count; ++i)
@@ -319,28 +335,24 @@ namespace Time
                 Form3 Form3 = new Form3();
                 Form3.Show();
                 this.Hide();
-            
+            //Adds up the hours worked and over time hours on the datagridview
+            //Opens a new form and closes the current 
         }
         #endregion
 
         #region PictureBoxHomeButton 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-           
-
                 Form2 Form2 = new Form2();
                 Form2.Show();
                 this.Hide();
-            
-        
+            //Opens a new form and hides the current one
         }
         #endregion
 
         #region PictureBoxPaySlipButton 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
-           
                 Total = 0;
 
                 for (int i = 0; i < newWorkingHoursTableDataGridView.Rows.Count; ++i)
@@ -357,15 +369,10 @@ namespace Time
                 Form4 Form4 = new Form4();
                 Form4.Show();
                 this.Hide();
-            
-            
+               //Adds up the hours worked and over time hours on the datagridview
+               //Opens a new form and closes the current 
         }
         #endregion
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }

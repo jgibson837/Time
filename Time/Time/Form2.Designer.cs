@@ -47,6 +47,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.startTimeTextBox = new System.Windows.Forms.TextBox();
+            this.newWorkingHoursTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataBaseDataSet = new Time.DataBaseDataSet();
             this.newWorkingHoursTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginDDataSet3 = new Time.LoginDDataSet3();
             this.endTimeTextBox = new System.Windows.Forms.TextBox();
@@ -69,8 +71,15 @@
             this.workingHoursTableTableAdapter = new Time.LoginDDataSet1TableAdapters.WorkingHoursTableTableAdapter();
             this.tableAdapterManager = new Time.LoginDDataSet1TableAdapters.TableAdapterManager();
             this.newWorkingHoursTableDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categories = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoursWorked = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.newWorkingHoursTableTableAdapter = new Time.LoginDDataSet3TableAdapters.NewWorkingHoursTableTableAdapter();
@@ -100,15 +109,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.newWorkingHoursTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataBaseDataSet = new Time.DataBaseDataSet();
             this.newWorkingHoursTableTableAdapter1 = new Time.DataBaseDataSetTableAdapters.NewWorkingHoursTableTableAdapter();
             this.tableAdapterManager2 = new Time.DataBaseDataSetTableAdapters.TableAdapterManager();
             startTimeLabel = new System.Windows.Forms.Label();
@@ -121,6 +121,8 @@
             randomLabel = new System.Windows.Forms.Label();
             hoursWorkedLabel = new System.Windows.Forms.Label();
             categoriesLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -132,8 +134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // startTimeLabel
@@ -179,7 +179,7 @@
             // jobLabel
             // 
             jobLabel.AutoSize = true;
-            jobLabel.Location = new System.Drawing.Point(289, 567);
+            jobLabel.Location = new System.Drawing.Point(288, 698);
             jobLabel.Name = "jobLabel";
             jobLabel.Size = new System.Drawing.Size(28, 13);
             jobLabel.TabIndex = 19;
@@ -188,7 +188,7 @@
             // overTimeLabel
             // 
             overTimeLabel.AutoSize = true;
-            overTimeLabel.Location = new System.Drawing.Point(225, 556);
+            overTimeLabel.Location = new System.Drawing.Point(224, 687);
             overTimeLabel.Name = "overTimeLabel";
             overTimeLabel.Size = new System.Drawing.Size(60, 13);
             overTimeLabel.TabIndex = 21;
@@ -207,7 +207,7 @@
             // randomLabel
             // 
             randomLabel.AutoSize = true;
-            randomLabel.Location = new System.Drawing.Point(250, 572);
+            randomLabel.Location = new System.Drawing.Point(249, 703);
             randomLabel.Name = "randomLabel";
             randomLabel.Size = new System.Drawing.Size(45, 13);
             randomLabel.TabIndex = 44;
@@ -216,7 +216,7 @@
             // hoursWorkedLabel
             // 
             hoursWorkedLabel.AutoSize = true;
-            hoursWorkedLabel.Location = new System.Drawing.Point(225, 572);
+            hoursWorkedLabel.Location = new System.Drawing.Point(224, 703);
             hoursWorkedLabel.Name = "hoursWorkedLabel";
             hoursWorkedLabel.Size = new System.Drawing.Size(85, 13);
             hoursWorkedLabel.TabIndex = 47;
@@ -225,7 +225,7 @@
             // categoriesLabel
             // 
             categoriesLabel.AutoSize = true;
-            categoriesLabel.Location = new System.Drawing.Point(128, 556);
+            categoriesLabel.Location = new System.Drawing.Point(127, 687);
             categoriesLabel.Name = "categoriesLabel";
             categoriesLabel.Size = new System.Drawing.Size(65, 13);
             categoriesLabel.TabIndex = 55;
@@ -319,6 +319,16 @@
             this.startTimeTextBox.Size = new System.Drawing.Size(92, 22);
             this.startTimeTextBox.TabIndex = 12;
             // 
+            // newWorkingHoursTableBindingSource1
+            // 
+            this.newWorkingHoursTableBindingSource1.DataMember = "NewWorkingHoursTable";
+            this.newWorkingHoursTableBindingSource1.DataSource = this.dataBaseDataSet;
+            // 
+            // dataBaseDataSet
+            // 
+            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
+            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // newWorkingHoursTableBindingSource
             // 
             this.newWorkingHoursTableBindingSource.DataMember = "NewWorkingHoursTable";
@@ -356,7 +366,7 @@
             // jobTextBox
             // 
             this.jobTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.newWorkingHoursTableBindingSource1, "Job", true));
-            this.jobTextBox.Location = new System.Drawing.Point(140, 583);
+            this.jobTextBox.Location = new System.Drawing.Point(139, 714);
             this.jobTextBox.Name = "jobTextBox";
             this.jobTextBox.Size = new System.Drawing.Size(100, 22);
             this.jobTextBox.TabIndex = 20;
@@ -364,7 +374,7 @@
             // overTimeTextBox
             // 
             this.overTimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.newWorkingHoursTableBindingSource1, "Overtime", true));
-            this.overTimeTextBox.Location = new System.Drawing.Point(235, 596);
+            this.overTimeTextBox.Location = new System.Drawing.Point(232, 695);
             this.overTimeTextBox.Name = "overTimeTextBox";
             this.overTimeTextBox.Size = new System.Drawing.Size(100, 22);
             this.overTimeTextBox.TabIndex = 22;
@@ -386,7 +396,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(128, 529);
+            this.textBox2.Location = new System.Drawing.Point(127, 660);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(30, 22);
             this.textBox2.TabIndex = 27;
@@ -394,7 +404,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(164, 536);
+            this.label9.Location = new System.Drawing.Point(163, 667);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 38;
@@ -403,7 +413,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(125, 583);
+            this.label10.Location = new System.Drawing.Point(124, 714);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 39;
@@ -412,7 +422,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(203, 536);
+            this.label11.Location = new System.Drawing.Point(202, 667);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 13);
             this.label11.TabIndex = 40;
@@ -448,12 +458,11 @@
             this.label4.Size = new System.Drawing.Size(107, 20);
             this.label4.TabIndex = 44;
             this.label4.Text = "Total Overtime";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // randomTextBox
             // 
             this.randomTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.newWorkingHoursTableBindingSource1, "UniqueID", true));
-            this.randomTextBox.Location = new System.Drawing.Point(247, 583);
+            this.randomTextBox.Location = new System.Drawing.Point(246, 714);
             this.randomTextBox.Name = "randomTextBox";
             this.randomTextBox.Size = new System.Drawing.Size(100, 22);
             this.randomTextBox.TabIndex = 45;
@@ -500,6 +509,13 @@
             this.newWorkingHoursTableDataGridView.Size = new System.Drawing.Size(645, 226);
             this.newWorkingHoursTableDataGridView.TabIndex = 45;
             // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
             // Categories
             // 
             this.Categories.DataPropertyName = "Categories";
@@ -508,12 +524,55 @@
             this.Categories.ReadOnly = true;
             this.Categories.Visible = false;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "StartTime";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Start Time";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "StartLunch";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Start Lunch";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "EndLunch";
+            this.dataGridViewTextBoxColumn4.HeaderText = "End Lunch";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "EndTime";
+            this.dataGridViewTextBoxColumn5.HeaderText = "End Time";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Job";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Job";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
             // HoursWorked
             // 
             this.HoursWorked.DataPropertyName = "HoursWorked";
             this.HoursWorked.HeaderText = "Hours Worked";
             this.HoursWorked.Name = "HoursWorked";
             this.HoursWorked.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Overtime";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Overtime";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // button8
             // 
@@ -534,7 +593,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(192, 26);
+            this.label5.Location = new System.Drawing.Point(201, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 47;
@@ -553,7 +612,7 @@
             // hoursWorkedTextBox
             // 
             this.hoursWorkedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.newWorkingHoursTableBindingSource1, "HoursWorked", true));
-            this.hoursWorkedTextBox.Location = new System.Drawing.Point(114, 599);
+            this.hoursWorkedTextBox.Location = new System.Drawing.Point(111, 698);
             this.hoursWorkedTextBox.MaxLength = 4;
             this.hoursWorkedTextBox.Name = "hoursWorkedTextBox";
             this.hoursWorkedTextBox.Size = new System.Drawing.Size(100, 22);
@@ -609,7 +668,7 @@
             // categoriesTextBox
             // 
             this.categoriesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.newWorkingHoursTableBindingSource1, "Categories", true));
-            this.categoriesTextBox.Location = new System.Drawing.Point(140, 557);
+            this.categoriesTextBox.Location = new System.Drawing.Point(139, 688);
             this.categoriesTextBox.Name = "categoriesTextBox";
             this.categoriesTextBox.Size = new System.Drawing.Size(100, 22);
             this.categoriesTextBox.TabIndex = 56;
@@ -626,7 +685,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(263, 540);
+            this.label12.Location = new System.Drawing.Point(262, 671);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 13);
             this.label12.TabIndex = 60;
@@ -691,7 +750,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(298, 551);
+            this.label16.Location = new System.Drawing.Point(297, 682);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(42, 13);
             this.label16.TabIndex = 67;
@@ -700,7 +759,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(246, 564);
+            this.label17.Location = new System.Drawing.Point(245, 695);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(27, 13);
             this.label17.TabIndex = 68;
@@ -718,7 +777,7 @@
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Location = new System.Drawing.Point(339, 398);
+            this.panel2.Location = new System.Drawing.Point(321, 398);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(389, 110);
             this.panel2.TabIndex = 69;
@@ -735,6 +794,7 @@
             this.button11.TabIndex = 70;
             this.button11.Text = "Show";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // textBox7
@@ -749,7 +809,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::Time.Properties.Resources.nisoftlogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -793,71 +853,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(192, 6);
+            this.label18.Location = new System.Drawing.Point(201, 6);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(75, 20);
             this.label18.TabIndex = 75;
             this.label18.Text = "Username";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "StartTime";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Start Time";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "StartLunch";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Start Lunch";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "EndLunch";
-            this.dataGridViewTextBoxColumn4.HeaderText = "End Lunch";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "EndTime";
-            this.dataGridViewTextBoxColumn5.HeaderText = "End Time";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Job";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Job";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Overtime";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Overtime";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // newWorkingHoursTableBindingSource1
-            // 
-            this.newWorkingHoursTableBindingSource1.DataMember = "NewWorkingHoursTable";
-            this.newWorkingHoursTableBindingSource1.DataSource = this.dataBaseDataSet;
-            // 
-            // dataBaseDataSet
-            // 
-            this.dataBaseDataSet.DataSetName = "DataBaseDataSet";
-            this.dataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // newWorkingHoursTableTableAdapter1
             // 
@@ -876,7 +876,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 488);
             this.Controls.Add(this.newWorkingHoursTableDataGridView);
@@ -935,6 +934,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDDataSet3)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -948,8 +949,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newWorkingHoursTableBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
